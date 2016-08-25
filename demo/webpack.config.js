@@ -1,16 +1,19 @@
 /**
- * @fileOverview webpack config
+ * @fileOverview router
  * @author: burning <www.cafeinit.com>
  * @date: 2016-08-25
  */
 
+var path = require('path')
+
 module.exports = {
   // entry point of our application
-  entry: './src/main.js',
+  entry: path.resolve(__dirname, './js/main.js'),
   // where to place the compiled bundle
   output: {
-    path: './dist',
-    filename: 'cafeinit-vue.js'
+    path: path.resolve(__dirname, './js'),
+    publicPath: '/js/',
+    filename: 'bundle.js'
   },
   module: {
     // `loaders` is an array of loaders to use.
