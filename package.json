@@ -1,0 +1,24 @@
+{
+  "name": "cafeinit-vue",
+  "version": "1.0.0",
+  "description": "CafeInit Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iburning/cafeinit-vue.git"
+  },
+  "keywords": [
+    "webpack",
+    "vue",
+    "cafeinit"
+  ],
+  "author": "burning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iburning/cafeinit-vue/issues"
+  },
+  "homepage": "https://github.com/iburning/cafeinit-vue#readme"
+}
