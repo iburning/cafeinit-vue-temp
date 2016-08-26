@@ -1,15 +1,24 @@
 /**
- * @fileOverview router
+ * @fileOverview main
  * @author: burning <www.cafeinit.com>
  * @date: 2016-08-25
  */
 
-var Vue = require('Vue')
+import Vue from 'vue';
+import cafeinitVue from 'cafeinit-vue'
+import App from './app.vue'
+
+Vue.use(cafeinitVue)
 
 new Vue({
-  el: '#app',
+  el: 'body',
 
   data: {
-    title: 'Hello CafeInit!'
+    title: 'Hello CafeInit!',
+    showModal: false
+  },
+
+  components: {
+    app: App
   }
 })

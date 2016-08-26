@@ -7,22 +7,43 @@
 var path = require('path')
 
 module.exports = {
-  // entry point of our application
   entry: path.resolve(__dirname, './js/main.js'),
-  // where to place the compiled bundle
+
   output: {
     path: path.resolve(__dirname, './js'),
-    publicPath: '/js/',
+    publicPath: '/js/',       // important for dev-server
     filename: 'bundle.js'
   },
+
   module: {
-    // `loaders` is an array of loaders to use.
-    // here we are only configuring vue-loader
     loaders: [
       {
-        test: /\.vue$/, // a regex for matching all files that end in `.vue`
-        loader: 'vue'   // loader to use for matched files
+        // use vue-loader for *.vue files
+        test: /\.vue$/,
+        loader: 'vue'
+      },
+
+      {
+        // use babel-loader for *.js files
+        test: /\.js$/,
+        loader: 'babel',
+        // important: exclude files in node_modules
+        // otherwise it's going to be really slow!
+        exclude: /node_modules/
       }
     ]
+  },
+
+  // if you are using babel-loader directly then
+  // the babel config block becomes required.
+  babel: {
+    presets: ['es2015'],
+    plugins: ['transform-runtime']
+  },
+
+  resolve: {
+    alias: {
+      'cafeinit-vue': path.resolve(__dirname, '../dist/cafeinit-vue.js')
+    }
   }
 }
