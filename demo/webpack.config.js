@@ -36,6 +36,18 @@ module.exports = {
         // use css-loader for *.css files
         test: /\.css$/,
         loader: 'style!css'
+      },
+
+      // the url-loader uses DataUrls.
+      // the file-loader emits files.
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      },
+
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader'
       }
     ]
   },
@@ -50,7 +62,8 @@ module.exports = {
   resolve: {
     alias: {
       'cafeinit-vue': path.resolve(__dirname, '../dist/js/cafeinit-vue.js'),
-      'cafeinit.css': path.resolve(__dirname, '../dist/css/cafeinit.css')
+      'cafeinit.css': path.resolve(__dirname, '../dist/css/cafeinit.css'),
+      'font-awesome.css': path.resolve(__dirname, '../dist/font-awesome/css/font-awesome.css')
     }
   }
 }
