@@ -4,22 +4,9 @@
     <meta charset="utf-8">
     <title>Demo</title>
   </head>
-  <body>
-    <h1>{{title}}</h1>
-    <app></app>
-
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <p>showModal = {{showModal}}</p>
-
-    <!-- use the modal component, pass in the prop -->
-    <modal :show.sync="showModal">
-      <!--
-        you can use custom content here to overwrite
-        default content
-      -->
-      <div slot="body" class="success">MODAL SUCCESS</div>
-      <h3 slot="header">custom header</h3>
-    </modal>
+  <body id="app">
+    <h1>CafeInit Vue</h1>
+    <router-view></router-view>
 
     <script src="/js/bundle.js"></script>
   </body>

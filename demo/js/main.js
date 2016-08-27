@@ -5,21 +5,78 @@
  */
 
 import Vue from 'vue';
+import VueRouter from 'vue-router'
 import cafeinitVue from 'cafeinit-vue'
 import cafeinitStyle from 'cafeinit.css'
-import App from './app.vue'
 
+Vue.use(VueRouter)
 Vue.use(cafeinitVue)
 
-new Vue({
-  el: 'body',
+var App = Vue.extend({})
+var router = window.__router = new VueRouter()
 
-  data: {
-    title: 'Hello CafeInit!',
-    showModal: false
+router.map({
+  '/': {
+    component: require('./home.vue')
   },
 
-  components: {
-    app: App
+  '/home': {
+    component: require('./home.vue')
+  },
+
+  // '/block': {
+  //   component: require('./pages/block')
+  // },
+  //
+  // '/buttons': {
+  //   component: require('./pages/buttons')
+  // },
+  //
+  // '/form': {
+  //   component: require('./pages/form')
+  // },
+  //
+  // '/modals': {
+  //   component: require('./pages/modals')
+  // },
+  //
+  // '/grid': {
+  //   component: require('./pages/grid')
+  // },
+  //
+  // '/list': {
+  //   component: require('./pages/list')
+  // },
+  //
+  // '/scroll-list': {
+  //   component: require('./pages/scrollList')
+  // },
+  //
+  // '/tab-bar': {
+  //   component: require('./pages/tabBar')
+  // },
+  //
+  //
+  // '/items': {
+  //   component: require('./pages/items')
+  // },
+  //
+  // '/orders': {
+  //   component: require('./pages/orders')
+  // }
+});
+
+router.beforeEach(function (transition) {
+  // console.log('transition', transition);
+  if (transition.to.path.indexOf('//') === 0) {
+    location.href = transition.to.path.replace('//', '/');
   }
-})
+  else if (transition.to.path.indexOf('/http') === 0) {
+    location.href = transition.to.path.replace('/http', 'http');
+  }
+  else {
+    transition.next();
+  }
+});
+
+router.start(App, '#app');
