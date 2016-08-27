@@ -1,0 +1,122 @@
+/**
+ * @fileOverview common
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-20
+ */
+/**
+ * @fileOverview ci-list
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-19
+ */
+.ci-list-hd,
+.ci-list-ft {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #555555;
+}
+.ci-list {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0 0 1em 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.ci-list-cell {
+  list-style: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  padding: 10px 15px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #fff;
+}
+.ci-list-cell:before {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid #ddd;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.ci-list-cell:first-child:before {
+  border-top: none;
+}
+.ci-list-cell-body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.ci-list-cell-body .title,
+.ci-list-cell-body .sub-title {
+  display: block;
+  float: left;
+  width: 40%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+.ci-list-cell-body .sub-title {
+  float: right;
+  width: 50%;
+  text-align: right;
+  color: #999999;
+}
+.ci-list-cell-accessory {
+  margin-left: 0.5em;
+  text-align: center;
+  color: #999999;
+}
+.ci-list-cell .am-form-group {
+  margin-bottom: 0;
+}
+.ci-list-cell .am-form-group label {
+  margin: 0;
+}
+body {
+  background-color: #efefef;
+  padding: 0;
+  margin: 0;
+}
+.ci-btn-area {
+  margin: 1.5em;
+}
+.ci-scroll {
+  overflow: auto;
+  -moz-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+}
+.ci-icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+}
+/* for modals */
+.modal-fade-transition {
+  -webkit-transition: background-color 300ms 0s;
+  transition: background-color 300ms 0s;
+}
+.modal-fade-enter,
+.modal-fade-leave {
+  background-color: rgba(0, 0, 0, 0);
+}
+.am-modal,
+.am-dimmer {
+  display: block;
+}

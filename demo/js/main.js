@@ -6,6 +6,7 @@
 
 import Vue from 'vue';
 import cafeinitVue from 'cafeinit-vue'
+import cafeinitStyle from 'cafeinit.css'
 import App from './app.vue'
 
 Vue.use(cafeinitVue)

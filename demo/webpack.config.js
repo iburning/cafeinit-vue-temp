@@ -30,6 +30,12 @@ module.exports = {
         // important: exclude files in node_modules
         // otherwise it's going to be really slow!
         exclude: /node_modules/
+      },
+
+      {
+        // use css-loader for *.css files
+        test: /\.css$/,
+        loader: 'style!css'
       }
     ]
   },
@@ -43,7 +49,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      'cafeinit-vue': path.resolve(__dirname, '../dist/cafeinit-vue.js')
+      'cafeinit-vue': path.resolve(__dirname, '../dist/cafeinit-vue.js'),
+      'cafeinit.css': path.resolve(__dirname, '../dist/css/cafeinit.css')
     }
   }
 }

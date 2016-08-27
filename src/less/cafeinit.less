@@ -1,0 +1,58 @@
+/**
+ * @fileOverview common
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-20
+ */
+
+
+@import "./varialbes";
+@import "./mixins";
+// @import "./ci-block";
+// @import "./ci-form";
+// @import "./ci-grid";
+@import "./ci-list";
+// @import "./ci-loading";
+// @import "./ci-tab-bar";
+
+
+body {
+  background-color: #efefef;
+  padding: 0;
+  margin: 0;
+}
+
+.ci-btn-area {
+  margin: 1.5em;
+}
+
+
+.ci-scroll {
+  overflow: auto;
+  -moz-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+}
+
+
+.ci-icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+}
+
+
+/* for modals */
+.modal-fade-transition {
+  -webkit-transition: background-color 300ms 0s;
+  transition: background-color 300ms 0s;
+}
+
+.modal-fade-enter, .modal-fade-leave {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.am-modal, .am-dimmer {
+  display: block;
+}
