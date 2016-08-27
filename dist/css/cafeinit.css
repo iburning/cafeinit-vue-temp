@@ -3,6 +3,245 @@
  * @author: burning <www.cafeinit.com>
  * @date: 2016-08-20
  */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/**
+ * @fileOverview ci-block
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-20
+ */
+.ci-block {
+  position: relative;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 0 1em 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.ci-block:before,
+.ci-block:after {
+  content: " ";
+  display: table;
+}
+.ci-block:after {
+  clear: both;
+}
+.ci-block-hd,
+.ci-block-bd,
+.ci-block-ft {
+  position: relative;
+  min-height: 44px;
+  padding: 10px 15px;
+}
+.ci-block-hd:before,
+.ci-block-bd:before,
+.ci-block-ft:before,
+.ci-block-hd:after,
+.ci-block-bd:after,
+.ci-block-ft:after {
+  content: " ";
+  display: table;
+}
+.ci-block-hd:after,
+.ci-block-bd:after,
+.ci-block-ft:after {
+  clear: both;
+}
+.ci-block-hd {
+  border-bottom: 1px solid #ddd;
+}
+.ci-block-hd h1,
+.ci-block-hd h2,
+.ci-block-hd h3,
+.ci-block-hd h4 {
+  float: left;
+  margin: 0;
+  font-weight: normal;
+}
+.ci-block-hd > a {
+  float: right;
+}
+.ci-block .ci-list {
+  margin: 0;
+  border-top: none;
+  border-bottom: none;
+}
 /**
  * @fileOverview ci-list
  * @author: burning <www.cafeinit.com>
@@ -32,6 +271,7 @@
   display: -webkit-flex;
   display: flex;
   width: 100%;
+  min-height: 44px;
   padding: 10px 15px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -86,10 +326,11 @@
 .ci-list-cell .am-form-group label {
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #efefef;
-  padding: 0;
-  margin: 0;
 }
 .ci-btn-area {
   margin: 1.5em;

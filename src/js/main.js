@@ -4,12 +4,21 @@
  * @date: 2016-08-26
  */
 
-import Modal from './Modal.vue'
+import CIBlock from './CIBlock/CIBlock.vue'
+import CIBlockBody from './CIBlock/CIBlockBody.vue'
+import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
+import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
+
+
 import CIList from './CIList/CIList.vue'
 import CIListCell from './CIList/CIListCell.vue'
 
 const components = {
-  'modal': Modal,
+  'ci-block': CIBlock,
+  'ci-block-body': CIBlockBody,
+  'ci-block-footer': CIBlockFooter,
+  'ci-block-header': CIBlockHeader,
+
   'ci-list': CIList,
   'ci-list-cell': CIListCell
 }

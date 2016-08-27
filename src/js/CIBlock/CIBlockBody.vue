@@ -1,7 +1,7 @@
 <template>
-  <ul class="ci-list">
-    <slot></slot>
-  </ul>
+  <div class="ci-block-bd">
+    <slot>Block Body</slot>
+  </div>
 </template>
 
 

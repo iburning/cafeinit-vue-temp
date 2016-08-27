@@ -7,7 +7,10 @@
 
 @import "./varialbes";
 @import "./mixins";
-// @import "./ci-block";
+
+@import "normalize";
+
+@import "./ci-block";
 // @import "./ci-form";
 // @import "./ci-grid";
 @import "./ci-list";
@@ -15,10 +18,13 @@
 // @import "./ci-tab-bar";
 
 
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: #efefef;
-  padding: 0;
-  margin: 0;
 }
 
 .ci-btn-area {

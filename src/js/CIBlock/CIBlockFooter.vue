@@ -1,7 +1,7 @@
 <template>
-  <ul class="ci-list">
-    <slot></slot>
-  </ul>
+  <div class="ci-block-ft">
+    <slot>Block Footer</slot>
+  </div>
 </template>
 
 

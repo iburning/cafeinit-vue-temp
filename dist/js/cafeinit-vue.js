@@ -1,1 +1,508 @@
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports["cafeinit-vue"]=t():e["cafeinit-vue"]=t()}(this,function(){return function(e){function t(r){if(o[r])return o[r].exports;var n=o[r]={exports:{},id:r,loaded:!1};return e[r].call(n.exports,n,n.exports,t),n.loaded=!0,n.exports}var o={};return t.m=e,t.c=o,t.p="",t(0)}([function(e,t,o){"use strict";function r(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(t,"__esModule",{value:!0}),t["default"]=function(e){for(name in c)e.component(name,c[name])};var n=o(11),s=r(n),i=o(9),a=r(i),l=o(10),d=r(l),c={modal:s["default"],"ci-list":a["default"],"ci-list-cell":d["default"]}},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]={props:{}}},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]={props:{accessory:{type:String,"default":""}},computed:{accessoryIcon:function(){var e="";switch(this.accessory){case"link":e="chevron-right";break;case"detail":e="info-circle";break;case"check":e="check";break;default:e=""}return e}},ready:function(){}}},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t["default"]={props:{show:{type:Boolean,required:!0,twoWay:!0}}}},function(e,t,o){t=e.exports=o(5)(),t.push([e.id,".modal-mask{position:fixed;z-index:9998;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);display:table;-webkit-transition:opacity .3s ease;transition:opacity .3s ease}.modal-wrapper{display:table-cell;vertical-align:middle}.modal-container{width:300px;margin:0 auto;padding:20px 30px;background-color:#fff;border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.33);-webkit-transition:all .3s ease;transition:all .3s ease;font-family:Helvetica,Arial,sans-serif}.modal-header h3{margin-top:0;color:#42b983}.modal-body{margin:20px 0}.modal-default-button{float:right}.modal-enter,.modal-leave{opacity:0}.modal-enter .modal-container,.modal-leave .modal-container{-webkit-transform:scale(1.1);transform:scale(1.1)}",""])},function(e,t){e.exports=function(){var e=[];return e.toString=function(){for(var e=[],t=0;t<this.length;t++){var o=this[t];o[2]?e.push("@media "+o[2]+"{"+o[1]+"}"):e.push(o[1])}return e.join("")},e.i=function(t,o){"string"==typeof t&&(t=[[null,t,""]]);for(var r={},n=0;n<this.length;n++){var s=this[n][0];"number"==typeof s&&(r[s]=!0)}for(n=0;n<t.length;n++){var i=t[n];"number"==typeof i[0]&&r[i[0]]||(o&&!i[2]?i[2]=o:o&&(i[2]="("+i[2]+") and ("+o+")"),e.push(i))}},e}},function(e,t){e.exports=" <ul class=ci-list> <slot></slot> </ul> "},function(e,t){e.exports=' <li class=ci-list-cell> <div class=ci-list-cell-body> <slot></slot> </div> <div class=ci-list-cell-accessory v-if=accessory> <i class="fa fa-{{accessoryIcon}}"></i> </div> </li> '},function(e,t){e.exports=' <div class=modal-mask v-show=show transition=modal> <div class=modal-wrapper> <div class=modal-container> <div class=modal-header> <slot name=header> default header </slot> </div> <div class=modal-body> <slot name=body> default body </slot> </div> <div class=modal-footer> <slot name=footer> default footer <button class=modal-default-button @click="show = false"> OK </button> </slot> </div> </div> </div> </div> '},function(e,t,o){var r,n;r=o(1),n=o(6),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),n&&(("function"==typeof e.exports?e.exports.options||(e.exports.options={}):e.exports).template=n)},function(e,t,o){var r,n;r=o(2),n=o(7),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),n&&(("function"==typeof e.exports?e.exports.options||(e.exports.options={}):e.exports).template=n)},function(e,t,o){var r,n;o(13),r=o(3),n=o(8),e.exports=r||{},e.exports.__esModule&&(e.exports=e.exports["default"]),n&&(("function"==typeof e.exports?e.exports.options||(e.exports.options={}):e.exports).template=n)},function(e,t,o){function r(e,t){for(var o=0;o<e.length;o++){var r=e[o],n=u[r.id];if(n){n.refs++;for(var s=0;s<n.parts.length;s++)n.parts[s](r.parts[s]);for(;s<r.parts.length;s++)n.parts.push(l(r.parts[s],t))}else{for(var i=[],s=0;s<r.parts.length;s++)i.push(l(r.parts[s],t));u[r.id]={id:r.id,refs:1,parts:i}}}}function n(e){for(var t=[],o={},r=0;r<e.length;r++){var n=e[r],s=n[0],i=n[1],a=n[2],l=n[3],d={css:i,media:a,sourceMap:l};o[s]?o[s].parts.push(d):t.push(o[s]={id:s,parts:[d]})}return t}function s(e,t){var o=v(),r=x[x.length-1];if("top"===e.insertAt)r?r.nextSibling?o.insertBefore(t,r.nextSibling):o.appendChild(t):o.insertBefore(t,o.firstChild),x.push(t);else{if("bottom"!==e.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");o.appendChild(t)}}function i(e){e.parentNode.removeChild(e);var t=x.indexOf(e);t>=0&&x.splice(t,1)}function a(e){var t=document.createElement("style");return t.type="text/css",s(e,t),t}function l(e,t){var o,r,n;if(t.singleton){var s=h++;o=m||(m=a(t)),r=d.bind(null,o,s,!1),n=d.bind(null,o,s,!0)}else o=a(t),r=c.bind(null,o),n=function(){i(o)};return r(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;r(e=t)}else n()}}function d(e,t,o,r){var n=o?"":r.css;if(e.styleSheet)e.styleSheet.cssText=y(t,n);else{var s=document.createTextNode(n),i=e.childNodes;i[t]&&e.removeChild(i[t]),i.length?e.insertBefore(s,i[t]):e.appendChild(s)}}function c(e,t){var o=t.css,r=t.media,n=t.sourceMap;if(r&&e.setAttribute("media",r),n&&(o+="\n/*# sourceURL="+n.sources[0]+" */",o+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(n))))+" */"),e.styleSheet)e.styleSheet.cssText=o;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(o))}}var u={},f=function(e){var t;return function(){return"undefined"==typeof t&&(t=e.apply(this,arguments)),t}},p=f(function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())}),v=f(function(){return document.head||document.getElementsByTagName("head")[0]}),m=null,h=0,x=[];e.exports=function(e,t){t=t||{},"undefined"==typeof t.singleton&&(t.singleton=p()),"undefined"==typeof t.insertAt&&(t.insertAt="bottom");var o=n(e);return r(o,t),function(e){for(var s=[],i=0;i<o.length;i++){var a=o[i],l=u[a.id];l.refs--,s.push(l)}if(e){var d=n(e);r(d,t)}for(var i=0;i<s.length;i++){var l=s[i];if(0===l.refs){for(var c=0;c<l.parts.length;c++)l.parts[c]();delete u[l.id]}}}};var y=function(){var e=[];return function(t,o){return e[t]=o,e.filter(Boolean).join("\n")}}()},function(e,t,o){var r=o(4);"string"==typeof r&&(r=[[e.id,r,""]]);o(12)(r,{});r.locals&&(e.exports=r.locals)}])});
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["cafeinit-vue"] = factory();
+	else
+		root["cafeinit-vue"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function (Vue) {
+	  for (name in components) {
+	    Vue.component(name, components[name]);
+	  }
+	};
+
+	var _CIBlock = __webpack_require__(1);
+
+	var _CIBlock2 = _interopRequireDefault(_CIBlock);
+
+	var _CIBlockBody = __webpack_require__(4);
+
+	var _CIBlockBody2 = _interopRequireDefault(_CIBlockBody);
+
+	var _CIBlockFooter = __webpack_require__(7);
+
+	var _CIBlockFooter2 = _interopRequireDefault(_CIBlockFooter);
+
+	var _CIBlockHeader = __webpack_require__(10);
+
+	var _CIBlockHeader2 = _interopRequireDefault(_CIBlockHeader);
+
+	var _CIList = __webpack_require__(13);
+
+	var _CIList2 = _interopRequireDefault(_CIList);
+
+	var _CIListCell = __webpack_require__(16);
+
+	var _CIListCell2 = _interopRequireDefault(_CIListCell);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * @fileOverview main
+	 * @author: burning <www.cafeinit.com>
+	 * @date: 2016-08-26
+	 */
+
+	var components = {
+	  'ci-block': _CIBlock2.default,
+	  'ci-block-body': _CIBlockBody2.default,
+	  'ci-block-footer': _CIBlockFooter2.default,
+	  'ci-block-header': _CIBlockHeader2.default,
+
+	  'ci-list': _CIList2.default,
+	  'ci-list-cell': _CIListCell2.default
+	};
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(2)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIBlock/CIBlock.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(3)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIBlock.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-block">
+	//     <slot></slot>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+
+	exports.default = {}
+	// ...
+
+
+	// </script>
+	;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-block\">\n  <slot></slot>\n</div>\n";
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(5)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIBlock/CIBlockBody.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(6)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIBlockBody.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-block-bd">
+	//     <slot>Block Body</slot>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+
+	exports.default = {}
+	// ...
+
+
+	// </script>
+	;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-block-bd\">\n  <slot>Block Body</slot>\n</div>\n";
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(8)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIBlock/CIBlockFooter.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(9)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIBlockFooter.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-block-ft">
+	//     <slot>Block Footer</slot>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+
+	exports.default = {}
+	// ...
+
+
+	// </script>
+	;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-block-ft\">\n  <slot>Block Footer</slot>\n</div>\n";
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(11)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIBlock/CIBlockHeader.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(12)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIBlockHeader.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-block-hd">
+	//     <slot><h3>{{title}}</h3></slot>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+
+	exports.default = {
+	  props: {
+	    title: {
+	      type: String,
+	      default: 'Block Title'
+	    }
+	  }
+	};
+
+	// </script>
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-block-hd\">\n  <slot><h3>{{title}}</h3></slot>\n</div>\n";
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(14)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIList/CIList.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(15)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIList.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 14 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <ul class="ci-list">
+	//     <slot></slot>
+	//   </ul>
+	// </template>
+	//
+	//
+	// <script>
+
+	exports.default = {}
+	// ...
+
+
+	// </script>
+	;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<ul class=\"ci-list\">\n  <slot></slot>\n</ul>\n";
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(17)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIList/CIListCell.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(18)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIListCell.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <li class="ci-list-cell">
+	//     <div class="ci-list-cell-body">
+	//       <slot></slot>
+	//     </div>
+	//     <div class="ci-list-cell-accessory" v-if="accessory">
+	//       <i class="fa fa-{{accessoryIcon}}"></i>
+	//     </div>
+	//   </li>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    accessory: {
+	      type: String,
+	      default: ''
+	    }
+	  },
+
+	  computed: {
+	    accessoryIcon: function accessoryIcon() {
+	      var icon = '';
+
+	      switch (this.accessory) {
+	        case 'link':
+	          icon = 'chevron-right';
+	          break;
+
+	        case 'detail':
+	          icon = 'info-circle';
+	          break;
+
+	        case 'check':
+	          icon = 'check';
+	          break;
+
+	        default:
+	          icon = '';
+	      }
+
+	      return icon;
+	    }
+	  },
+
+	  ready: function ready() {
+	    //
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<li class=\"ci-list-cell\">\n  <div class=\"ci-list-cell-body\">\n    <slot></slot>\n  </div>\n  <div class=\"ci-list-cell-accessory\" v-if=\"accessory\">\n    <i class=\"fa fa-{{accessoryIcon}}\"></i>\n  </div>\n</li>\n";
+
+/***/ }
+/******/ ])
+});
+;

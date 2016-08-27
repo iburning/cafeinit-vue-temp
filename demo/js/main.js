@@ -17,16 +17,16 @@ var router = window.__router = new VueRouter()
 
 router.map({
   '/': {
-    component: require('./home.vue')
+    component: require('./index.vue')
   },
 
   '/home': {
-    component: require('./home.vue')
+    component: require('./index.vue')
   },
 
-  // '/block': {
-  //   component: require('./pages/block')
-  // },
+  '/block': {
+    component: require('./block.vue')
+  },
   //
   // '/buttons': {
   //   component: require('./pages/buttons')
