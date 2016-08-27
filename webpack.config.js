@@ -5,10 +5,10 @@
  */
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/js/main.js',
 
   output: {
-    path: './dist',
+    path: './dist/js',
     filename: 'cafeinit-vue.js',
     library: 'cafeinit-vue',
     libraryTarget: 'umd'
