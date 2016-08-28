@@ -9,6 +9,8 @@ import CIBlockBody from './CIBlock/CIBlockBody.vue'
 import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
 import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
 
+import CIButton from './CIButton/CIButton.vue'
+import CILinkButton from './CIButton/CILinkButton.vue'
 
 import CIList from './CIList/CIList.vue'
 import CIListCell from './CIList/CIListCell.vue'
@@ -22,6 +24,9 @@ const components = {
   'ci-block-body': CIBlockBody,
   'ci-block-footer': CIBlockFooter,
   'ci-block-header': CIBlockHeader,
+
+  'ci-button': CIButton,
+  'ci-link-button': CILinkButton,
 
   'ci-list': CIList,
   'ci-list-cell': CIListCell,

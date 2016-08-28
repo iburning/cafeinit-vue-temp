@@ -28,10 +28,10 @@ router.map({
   '/block': {
     component: require('./block.vue')
   },
-  //
-  // '/buttons': {
-  //   component: require('./pages/buttons')
-  // },
+
+  '/buttons': {
+    component: require('./buttons.vue')
+  },
   //
   // '/form': {
   //   component: require('./pages/form')
