@@ -41,9 +41,9 @@ router.map({
   //   component: require('./pages/modals')
   // },
   //
-  // '/grid': {
-  //   component: require('./pages/grid')
-  // },
+  '/grid': {
+    component: require('./grid.vue')
+  },
   //
   // '/list': {
   //   component: require('./pages/list')

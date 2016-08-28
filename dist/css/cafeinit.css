@@ -243,6 +243,39 @@ th {
   border-bottom: none;
 }
 /**
+ * @fileOverview ci-grid
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-19
+ */
+.ci-grid {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+.ci-grid-cell {
+  list-style: none;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  min-width: 50px;
+  min-height: 50px;
+  flex-basis: 50%;
+}
+@media only screen and (min-width:641px) {
+  .ci-grid-cell {
+    flex-basis: 33.33333333%;
+  }
+}
+@media only screen and (min-width:1025px) {
+  .ci-grid-cell {
+    flex-basis: 25%;
+  }
+}
+/**
  * @fileOverview ci-list
  * @author: burning <www.cafeinit.com>
  * @date: 2016-08-19

@@ -58,9 +58,7 @@
 
 
 <script>
-
 export default {
   // ...
 }
-
 </script>

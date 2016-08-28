@@ -13,6 +13,10 @@ import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
 import CIList from './CIList/CIList.vue'
 import CIListCell from './CIList/CIListCell.vue'
 
+import CIGrid from './CIGrid/CIGrid.vue'
+import CIGridCell from './CIGrid/CIGridCell.vue'
+
+
 const components = {
   'ci-block': CIBlock,
   'ci-block-body': CIBlockBody,
@@ -20,7 +24,10 @@ const components = {
   'ci-block-header': CIBlockHeader,
 
   'ci-list': CIList,
-  'ci-list-cell': CIListCell
+  'ci-list-cell': CIListCell,
+
+  'ci-grid': CIGrid,
+  'ci-grid-cell': CIGridCell
 }
 
 export default function (Vue) {
