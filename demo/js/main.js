@@ -36,11 +36,11 @@ router.map({
   // '/form': {
   //   component: require('./pages/form')
   // },
-  //
-  // '/modals': {
-  //   component: require('./pages/modals')
-  // },
-  //
+
+  '/modals': {
+    component: require('./modals.vue')
+  },
+
   '/grid': {
     component: require('./grid.vue')
   },
@@ -55,29 +55,20 @@ router.map({
   //
   // '/tab-bar': {
   //   component: require('./pages/tabBar')
-  // },
-  //
-  //
-  // '/items': {
-  //   component: require('./pages/items')
-  // },
-  //
-  // '/orders': {
-  //   component: require('./pages/orders')
   // }
-});
+})
 
-router.beforeEach(function (transition) {
-  // console.log('transition', transition);
+router.beforeEach((transition) => {
+  // console.log('transition', transition)
   if (transition.to.path.indexOf('//') === 0) {
-    location.href = transition.to.path.replace('//', '/');
+    location.href = transition.to.path.replace('//', '/')
   }
   else if (transition.to.path.indexOf('/http') === 0) {
-    location.href = transition.to.path.replace('/http', 'http');
+    location.href = transition.to.path.replace('/http', 'http')
   }
   else {
-    transition.next();
+    transition.next()
   }
-});
+})
 
-router.start(App, '#app');
+router.start(App, '#app')

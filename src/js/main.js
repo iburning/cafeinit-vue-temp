@@ -20,6 +20,11 @@ import CILoading from './CILoading/CILoading.vue'
 import CIGrid from './CIGrid/CIGrid.vue'
 import CIGridCell from './CIGrid/CIGridCell.vue'
 
+import CIModal from './CIModal/CIModal.vue'
+import CIActions from './CIModal/CIActions.vue'
+import CIAlert from './CIModal/CIAlert.vue'
+import CIConfirm from './CIModal/CIConfirm.vue'
+
 import CIScrollHelper from './utils/CIScrollHelper'
 
 
@@ -36,6 +41,11 @@ const components = {
   'ci-list-cell': CIListCell,
 
   'ci-loading': CILoading,
+
+  'ci-modal': CIModal,
+  'ci-actions': CIActions,
+  'ci-alert': CIAlert,
+  'ci-confirm': CIConfirm,
 
   'ci-grid': CIGrid,
   'ci-grid-cell': CIGridCell
