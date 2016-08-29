@@ -10,8 +10,8 @@
 
 
 <script>
-import cafeinitVue from 'cafeinit-vue'
-var CIScrollHelper = cafeinitVue.utils.CIScrollHelper
+import CafeinitVue from 'cafeinit-vue'
+var CIScrollHelper = CafeinitVue.utils.CIScrollHelper
 
 export default {
   data() {
