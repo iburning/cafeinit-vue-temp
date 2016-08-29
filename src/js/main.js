@@ -64,6 +64,8 @@ const components = {
   'ci-alert': CIAlert,
   'ci-confirm': CIConfirm,
 
+  'ci-loading': CILoading,
+
   'ci-grid': CIGrid,
   'ci-grid-cell': CIGridCell,
 

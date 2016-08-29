@@ -416,6 +416,7 @@ th {
 .ci-loading:after {
   clear: both;
 }
+<<<<<<< HEAD
 /**
  * @fileOverview ci-tab-bar
  * @author: burning <www.cafeinit.com>
@@ -447,6 +448,8 @@ th {
 .ci-tab-bar-item.ci-selected a {
   color: #DB7372;
 }
+=======
+>>>>>>> d31aa30beccb5cb354be610a73d5bd81db48d1ca
 * {
   box-sizing: border-box;
 }
