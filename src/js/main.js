@@ -32,6 +32,9 @@ import CIActions from './CIModal/CIActions.vue'
 import CIAlert from './CIModal/CIAlert.vue'
 import CIConfirm from './CIModal/CIConfirm.vue'
 
+import CITabBar from './CITabView/CITabBar.vue'
+
+
 import CIScrollHelper from './utils/CIScrollHelper'
 
 
@@ -62,7 +65,9 @@ const components = {
   'ci-confirm': CIConfirm,
 
   'ci-grid': CIGrid,
-  'ci-grid-cell': CIGridCell
+  'ci-grid-cell': CIGridCell,
+
+  'ci-tab-bar': CITabBar,
 }
 
 // export default function (Vue) {

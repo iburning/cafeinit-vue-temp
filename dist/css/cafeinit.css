@@ -416,6 +416,37 @@ th {
 .ci-loading:after {
   clear: both;
 }
+/**
+ * @fileOverview ci-tab-bar
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-19
+ */
+.ci-tab-bar-items {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0 0 1em 0;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.ci-tab-bar-item {
+  list-style: none;
+  flex: 1;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  line-height: 44px;
+  text-align: center;
+}
+.ci-tab-bar-item.ci-selected {
+  border-bottom: 3px solid #DB7372;
+}
+.ci-tab-bar-item.ci-selected a {
+  color: #DB7372;
+}
 * {
   box-sizing: border-box;
 }

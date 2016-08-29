@@ -52,10 +52,10 @@ router.map({
   '/scroll-list': {
     component: require('./scrollList.vue')
   },
-  //
-  // '/tab-bar': {
-  //   component: require('./pages/tabBar')
-  // }
+
+  '/tab-bar': {
+    component: require('./tabBar.vue')
+  }
 })
 
 router.beforeEach((transition) => {

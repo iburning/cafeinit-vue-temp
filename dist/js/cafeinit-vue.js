@@ -144,17 +144,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _CIConfirm2 = _interopRequireDefault(_CIConfirm);
 
-	var _CIScrollHelper = __webpack_require__(64);
+	var _CITabBar = __webpack_require__(64);
+
+	var _CITabBar2 = _interopRequireDefault(_CITabBar);
+
+	var _CIScrollHelper = __webpack_require__(67);
 
 	var _CIScrollHelper2 = _interopRequireDefault(_CIScrollHelper);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * @fileOverview main
-	 * @author: burning <www.cafeinit.com>
-	 * @date: 2016-08-26
-	 */
 
 	var _components = {
 	  'ci-block': _CIBlock2.default,
@@ -183,7 +181,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'ci-confirm': _CIConfirm2.default,
 
 	  'ci-grid': _CIGrid2.default,
-	  'ci-grid-cell': _CIGridCell2.default
+	  'ci-grid-cell': _CIGridCell2.default,
+
+	  'ci-tab-bar': _CITabBar2.default
 	};
 
 	// export default function (Vue) {
@@ -192,6 +192,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	//   }
 	// }
 
+
+	/**
+	 * @fileOverview main
+	 * @author: burning <www.cafeinit.com>
+	 * @date: 2016-08-26
+	 */
 
 	exports.default = {
 	  components: function components(Vue) {
@@ -2050,6 +2056,93 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(65)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CITabView/CITabBar.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(66)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CITabBar.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-tab-bar">
+	//     <ul class="ci-tab-bar-items">
+	//       <li class="ci-tab-bar-item" v-for="(index, item) in items"
+	//         v-bind:class="[item.className, {'ci-selected': selectedIndex == index}]"
+	//         v-on:click="itemOnClick(index, item)">
+	//         <a v-if="item.path" v-link="{path: item.path}">{{item.text}}</a>
+	//         <a v-else href="javascritp:;">{{item.text}}</a>
+	//       </li>
+	//     </ul>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    items: {
+	      type: Array,
+	      default: function _default() {
+	        return [];
+	      }
+	    },
+
+	    selectedIndex: {
+	      type: Number,
+	      default: 0
+	    }
+	  },
+
+	  ready: function ready() {
+	    // ...
+	  },
+
+
+	  methods: {
+	    itemOnClick: function itemOnClick(index, item) {
+	      this.selectedIndex = index;
+	      this.$emit('on_item_click', index, item);
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 66 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-tab-bar\">\n  <ul class=\"ci-tab-bar-items\">\n    <li class=\"ci-tab-bar-item\" v-for=\"(index, item) in items\"\n      v-bind:class=\"[item.className, {'ci-selected': selectedIndex == index}]\"\n      v-on:click=\"itemOnClick(index, item)\">\n      <a v-if=\"item.path\" v-link=\"{path: item.path}\">{{item.text}}</a>\n      <a v-else href=\"javascritp:;\">{{item.text}}</a>\n    </li>\n  </ul>\n</div>\n";
+
+/***/ },
+/* 67 */
 /***/ function(module, exports) {
 
 	'use strict';

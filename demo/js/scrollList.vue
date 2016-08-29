@@ -11,11 +11,7 @@
 
 <script>
 import cafeinitVue from 'cafeinit-vue'
-console.log('cafeinitVue', cafeinitVue)
 var CIScrollHelper = cafeinitVue.utils.CIScrollHelper
-console.log('CIScrollHelper', CIScrollHelper)
-//
-// const CIScrollHelper = cafeinitVue.utils.CIScrollHelper
 
 export default {
   data() {
