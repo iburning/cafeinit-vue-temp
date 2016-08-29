@@ -1,14 +1,12 @@
 <template>
-  <ul class="ci-grid-cell">
+  <li class="ci-grid-cell">
     <slot></slot>
-  </ul>
+  </li>
 </template>
 
 
 <script>
-
 export default {
   // ...
 }
-
 </script>

@@ -359,11 +359,34 @@ th {
 .ci-list-cell .am-form-group label {
   margin: 0;
 }
+/**
+ * @fileOverview ci-loading
+ * @author: burning <www.cafeinit.com>
+ * @date: 2016-08-20
+ */
+.ci-loading {
+  padding: 0;
+  margin: 1em;
+  text-align: center;
+}
+.ci-loading:before,
+.ci-loading:after {
+  content: " ";
+  display: table;
+}
+.ci-loading:after {
+  clear: both;
+}
 * {
   box-sizing: border-box;
 }
 body {
   background-color: #efefef;
+}
+.app-title {
+  padding: 10px;
+  margin: 0;
+  font-size: 24px;
 }
 .ci-btn-area {
   margin: 1.5em;

@@ -11,7 +11,7 @@ import cafeinitStyle from 'cafeinit.css'
 import fontAwesome from 'font-awesome.css'
 
 Vue.use(VueRouter)
-Vue.use(cafeinitVue)
+Vue.use(cafeinitVue.components)
 
 var App = Vue.extend({})
 var router = window.__router = new VueRouter()
@@ -44,14 +44,14 @@ router.map({
   '/grid': {
     component: require('./grid.vue')
   },
-  //
-  // '/list': {
-  //   component: require('./pages/list')
-  // },
-  //
-  // '/scroll-list': {
-  //   component: require('./pages/scrollList')
-  // },
+
+  '/list': {
+    component: require('./list.vue')
+  },
+
+  '/scroll-list': {
+    component: require('./scrollList.vue')
+  },
   //
   // '/tab-bar': {
   //   component: require('./pages/tabBar')

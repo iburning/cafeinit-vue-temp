@@ -9,6 +9,7 @@
       <ci-button type="submit">Submit Button</ci-button>
 
       <ci-button>Default Button</ci-button>
+      <ci-button tag-name="a">An a Button</ci-button>
       <ci-button style="primary">Primary Button</ci-button>
       <ci-button style="secondary">Secondary Button</ci-button>
       <ci-button style="success">Success Button</ci-button>

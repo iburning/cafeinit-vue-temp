@@ -1,0 +1,24 @@
+{
+  "name": "demo",
+  "homepage": "https://github.com/iburning/cafeinit-vue",
+  "authors": [
+    "burning <iburning@live.cn>"
+  ],
+  "description": "cafeinit-vue demo",
+  "main": "",
+  "keywords": [
+    "vue",
+    "cafeinit"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amazeui": "^2.7.2"
+  }
+}
