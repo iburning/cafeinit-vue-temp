@@ -2,7 +2,7 @@
   "name": "cafeinit-vue",
   "version": "1.0.0",
   "description": "CafeInit Vue.js",
-  "main": "index.js",
+  "main": "dist/js/cafeinit-vue.js",
   "scripts": {
     "build": "webpack -p",
     "dev": "webpack-dev-server --inline --config demo/webpack.config.js --content-base demo/",
