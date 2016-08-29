@@ -44,14 +44,14 @@ router.map({
   '/grid': {
     component: require('./grid.vue')
   },
-  //
-  // '/list': {
-  //   component: require('./pages/list')
-  // },
-  //
-  // '/scroll-list': {
-  //   component: require('./pages/scrollList')
-  // },
+
+  '/list': {
+    component: require('./list.vue')
+  },
+
+  '/scroll-list': {
+    component: require('./scrollList.vue')
+  },
   //
   // '/tab-bar': {
   //   component: require('./pages/tabBar')

@@ -15,8 +15,12 @@ import CILinkButton from './CIButton/CILinkButton.vue'
 import CIList from './CIList/CIList.vue'
 import CIListCell from './CIList/CIListCell.vue'
 
+import CILoading from './CILoading/CILoading.vue'
+
 import CIGrid from './CIGrid/CIGrid.vue'
 import CIGridCell from './CIGrid/CIGridCell.vue'
+
+import CIScrollHelper from './utils/CIScrollHelper'
 
 
 const components = {
@@ -30,6 +34,8 @@ const components = {
 
   'ci-list': CIList,
   'ci-list-cell': CIListCell,
+
+  'ci-loading': CILoading,
 
   'ci-grid': CIGrid,
   'ci-grid-cell': CIGridCell
