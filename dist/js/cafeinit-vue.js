@@ -84,43 +84,67 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _CILinkButton2 = _interopRequireDefault(_CILinkButton);
 
-	var _CIList = __webpack_require__(19);
+	var _CICheckbox = __webpack_require__(19);
+
+	var _CICheckbox2 = _interopRequireDefault(_CICheckbox);
+
+	var _CIInput = __webpack_require__(22);
+
+	var _CIInput2 = _interopRequireDefault(_CIInput);
+
+	var _CIRadio = __webpack_require__(25);
+
+	var _CIRadio2 = _interopRequireDefault(_CIRadio);
+
+	var _CISelect = __webpack_require__(28);
+
+	var _CISelect2 = _interopRequireDefault(_CISelect);
+
+	var _CIList = __webpack_require__(31);
 
 	var _CIList2 = _interopRequireDefault(_CIList);
 
-	var _CIListCell = __webpack_require__(22);
+	var _CIListCell = __webpack_require__(34);
 
 	var _CIListCell2 = _interopRequireDefault(_CIListCell);
 
-	var _CILoading = __webpack_require__(25);
+	var _CIListCheckbox = __webpack_require__(37);
+
+	var _CIListCheckbox2 = _interopRequireDefault(_CIListCheckbox);
+
+	var _CIListRadio = __webpack_require__(40);
+
+	var _CIListRadio2 = _interopRequireDefault(_CIListRadio);
+
+	var _CILoading = __webpack_require__(43);
 
 	var _CILoading2 = _interopRequireDefault(_CILoading);
 
-	var _CIGrid = __webpack_require__(28);
+	var _CIGrid = __webpack_require__(46);
 
 	var _CIGrid2 = _interopRequireDefault(_CIGrid);
 
-	var _CIGridCell = __webpack_require__(31);
+	var _CIGridCell = __webpack_require__(49);
 
 	var _CIGridCell2 = _interopRequireDefault(_CIGridCell);
 
-	var _CIModal = __webpack_require__(34);
+	var _CIModal = __webpack_require__(52);
 
 	var _CIModal2 = _interopRequireDefault(_CIModal);
 
-	var _CIActions = __webpack_require__(37);
+	var _CIActions = __webpack_require__(55);
 
 	var _CIActions2 = _interopRequireDefault(_CIActions);
 
-	var _CIAlert = __webpack_require__(40);
+	var _CIAlert = __webpack_require__(58);
 
 	var _CIAlert2 = _interopRequireDefault(_CIAlert);
 
-	var _CIConfirm = __webpack_require__(43);
+	var _CIConfirm = __webpack_require__(61);
 
 	var _CIConfirm2 = _interopRequireDefault(_CIConfirm);
 
-	var _CIScrollHelper = __webpack_require__(46);
+	var _CIScrollHelper = __webpack_require__(64);
 
 	var _CIScrollHelper2 = _interopRequireDefault(_CIScrollHelper);
 
@@ -141,8 +165,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'ci-button': _CIButton2.default,
 	  'ci-link-button': _CILinkButton2.default,
 
+	  'ci-checkbox': _CICheckbox2.default,
+	  'ci-input': _CIInput2.default,
+	  'ci-radio': _CIRadio2.default,
+	  'ci-select': _CISelect2.default,
+
 	  'ci-list': _CIList2.default,
 	  'ci-list-cell': _CIListCell2.default,
+	  'ci-list-checkbox': _CIListCheckbox2.default,
+	  'ci-list-radio': _CIListRadio2.default,
 
 	  'ci-loading': _CILoading2.default,
 
@@ -638,8 +669,378 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/CIList/CIList.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] src/js/CIForm/CICheckbox.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(21)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CICheckbox.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-form-group">
+	//     <label class="ci-label" v-if="title"
+	//       v-bind:style="{width: titleWidth}">{{title}}</label>
+	//     <div class="ci-form-control">
+	//       <label v-for="item in items">
+	//         <input type="checkbox"
+	//           v-bind:name="name"
+	//           v-bind:value="item.value"
+	//           v-model="model" /> {{item.title}}
+	//       </label>
+	//     </div>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    model: {
+	      type: Array,
+	      twoWay: true,
+	      default: [],
+	      required: false
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    titleWidth: {
+	      type: String,
+	      default: ''
+	    },
+
+	    name: {
+	      type: String,
+	      required: true
+	    },
+
+	    items: {
+	      type: Array,
+	      required: true
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-form-group\">\n  <label class=\"ci-label\" v-if=\"title\"\n    v-bind:style=\"{width: titleWidth}\">{{title}}</label>\n  <div class=\"ci-form-control\">\n    <label v-for=\"item in items\">\n      <input type=\"checkbox\"\n        v-bind:name=\"name\"\n        v-bind:value=\"item.value\"\n        v-model=\"model\" /> {{item.title}}\n    </label>\n  </div>\n</div>\n";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(23)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIForm/CIInput.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(24)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIInput.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-form-group">
+	//     <label class="ci-label" v-if="title"
+	//       v-bind:style="{width: titleWidth}">{{title}}</label>
+	//     <input class="ci-form-control"
+	//       v-model="model"
+	//       v-bind:type="type"
+	//       v-bind:name="name"
+	//       v-bind:placeholder="placeholder"
+	//       v-bind:disabled="disabled" />
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    model: {
+	      type: String,
+	      twoWay: true,
+	      default: '',
+	      required: false
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    titleWidth: {
+	      type: String,
+	      default: ''
+	    },
+
+	    type: {
+	      type: String,
+	      default: 'text'
+	    },
+
+	    name: {
+	      type: String,
+	      required: true
+	    },
+
+	    placeholder: {
+	      type: String
+	    },
+
+	    disabled: {
+	      type: Boolean,
+	      default: false
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-form-group\">\n  <label class=\"ci-label\" v-if=\"title\"\n    v-bind:style=\"{width: titleWidth}\">{{title}}</label>\n  <input class=\"ci-form-control\"\n    v-model=\"model\"\n    v-bind:type=\"type\"\n    v-bind:name=\"name\"\n    v-bind:placeholder=\"placeholder\"\n    v-bind:disabled=\"disabled\" />\n</div>\n";
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(26)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIForm/CIRadio.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(27)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIRadio.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-form-group">
+	//     <label class="ci-label" v-if="title"
+	//       v-bind:style="{width: titleWidth}">{{title}}</label>
+	//     <div class="ci-form-control">
+	//       <label v-for="item in items">
+	//         <input type="radio"
+	//           v-bind:name="name"
+	//           v-bind:value="item.value"
+	//           v-model="model" /> {{item.title}}
+	//       </label>
+	//     </div>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    model: {
+	      type: String,
+	      twoWay: true,
+	      default: '',
+	      required: false
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    titleWidth: {
+	      type: String,
+	      default: ''
+	    },
+
+	    name: {
+	      type: String,
+	      required: true
+	    },
+
+	    items: {
+	      type: Array,
+	      required: true
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-form-group\">\n  <label class=\"ci-label\" v-if=\"title\"\n    v-bind:style=\"{width: titleWidth}\">{{title}}</label>\n  <div class=\"ci-form-control\">\n    <label v-for=\"item in items\">\n      <input type=\"radio\"\n        v-bind:name=\"name\"\n        v-bind:value=\"item.value\"\n        v-model=\"model\" /> {{item.title}}\n    </label>\n  </div>\n</div>\n";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(29)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIForm/CISelect.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(30)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CISelect.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-form-group">
+	//     <label class="ci-label" v-if="title"
+	//       v-bind:style="{width: titleWidth}">{{title}}</label>
+	//     <select class="ci-form-control" name="{{name}}" v-model="model">
+	//       <option value="{{item.value}}" v-for="item in items">{{item.title}}</option>
+	//     </select>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    model: {
+	      type: String,
+	      twoWay: true,
+	      default: '',
+	      required: false
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    titleWidth: {
+	      type: String,
+	      default: ''
+	    },
+
+	    name: {
+	      type: String,
+	      required: true
+	    },
+
+	    items: {
+	      type: Array,
+	      required: true
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-form-group\">\n  <label class=\"ci-label\" v-if=\"title\"\n    v-bind:style=\"{width: titleWidth}\">{{title}}</label>\n  <select class=\"ci-form-control\" name=\"{{name}}\" v-model=\"model\">\n    <option value=\"{{item.value}}\" v-for=\"item in items\">{{item.title}}</option>\n  </select>\n</div>\n";
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(32)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIList/CIList.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(33)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -658,7 +1059,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 20 */
+/* 32 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -681,22 +1082,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 21 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<ul class=\"ci-list\">\n  <slot></slot>\n</ul>\n";
 
 /***/ },
-/* 22 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(23)
+	__vue_script__ = __webpack_require__(35)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIList/CIListCell.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(24)
+	__vue_template__ = __webpack_require__(36)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -715,7 +1116,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 23 */
+/* 35 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -776,22 +1177,199 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 24 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<li class=\"ci-list-cell\">\n  <div class=\"ci-list-cell-body\">\n    <slot></slot>\n  </div>\n  <div class=\"ci-list-cell-accessory\" v-if=\"accessory\">\n    <i class=\"fa fa-{{accessoryIcon}}\"></i>\n  </div>\n</li>\n";
 
 /***/ },
-/* 25 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(26)
+	__vue_script__ = __webpack_require__(38)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIList/CIListCheckbox.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(39)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIListCheckbox.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-list-hd" v-if="title">{{title}}</div>
+	//   <ul class="ci-list ci-list-checkbox">
+	//     <ci-list-cell v-for="item in items">
+	//       <div class="ci-form-group">
+	//         <label class="ci-form-control">
+	//           <input class="ci-checkbox" type="checkbox"
+	//             v-bind:name="name"
+	//             v-bind:value="item.value"
+	//             v-model="model" /> {{item.title}}
+	//         </label>
+	//       </div>
+	//     </ci-list-cell>
+	//   </ul>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    model: {
+	      type: Array,
+	      twoWay: true,
+	      default: [],
+	      required: false
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    name: {
+	      type: String,
+	      required: true
+	    },
+
+	    items: {
+	      type: Array,
+	      required: true
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 39 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-list-hd\" v-if=\"title\">{{title}}</div>\n<ul class=\"ci-list ci-list-checkbox\">\n  <ci-list-cell v-for=\"item in items\">\n    <div class=\"ci-form-group\">\n      <label class=\"ci-form-control\">\n        <input class=\"ci-checkbox\" type=\"checkbox\"\n          v-bind:name=\"name\"\n          v-bind:value=\"item.value\"\n          v-model=\"model\" /> {{item.title}}\n      </label>\n    </div>\n  </ci-list-cell>\n</ul>\n";
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(41)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIList/CIListRadio.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(42)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIListRadio.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div class="ci-list-hd" v-if="title">{{title}}</div>
+	//   <ul class="ci-list ci-list-radio">
+	//     <ci-list-cell v-for="item in items">
+	//       <div class="ci-form-group">
+	//         <label class="ci-form-control">
+	//           {{item.title}}
+	//           <input class="ci-radio" type="radio"
+	//             v-bind:name="name"
+	//             v-bind:value="item.value"
+	//             v-model="model" />
+	//         </label>
+	//       </div>
+	//     </ci-list-cell>
+	//   </ul>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    model: {
+	      type: String,
+	      twoWay: true,
+	      default: '',
+	      required: false
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    name: {
+	      type: String,
+	      required: true
+	    },
+
+	    items: {
+	      type: Array,
+	      required: true
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"ci-list-hd\" v-if=\"title\">{{title}}</div>\n<ul class=\"ci-list ci-list-radio\">\n  <ci-list-cell v-for=\"item in items\">\n    <div class=\"ci-form-group\">\n      <label class=\"ci-form-control\">\n        {{item.title}}\n        <input class=\"ci-radio\" type=\"radio\"\n          v-bind:name=\"name\"\n          v-bind:value=\"item.value\"\n          v-model=\"model\" />\n      </label>\n    </div>\n  </ci-list-cell>\n</ul>\n";
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(44)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CILoading/CILoading.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
+	__vue_template__ = __webpack_require__(45)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -810,7 +1388,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 26 */
+/* 44 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -833,22 +1411,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 27 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ci-loading\">\n  <i class=\"fa fa-spinner ci-icon-spin\"></i>\n</div>\n";
 
 /***/ },
-/* 28 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(29)
+	__vue_script__ = __webpack_require__(47)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIGrid/CIGrid.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(30)
+	__vue_template__ = __webpack_require__(48)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -867,7 +1445,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 29 */
+/* 47 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -890,22 +1468,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 30 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<ul class=\"ci-grid\">\n  <slot></slot>\n</ul>\n";
 
 /***/ },
-/* 31 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(32)
+	__vue_script__ = __webpack_require__(50)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIGrid/CIGridCell.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(33)
+	__vue_template__ = __webpack_require__(51)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -924,7 +1502,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 32 */
+/* 50 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -947,22 +1525,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 
 /***/ },
-/* 33 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<li class=\"ci-grid-cell\">\n  <slot></slot>\n</li>\n";
 
 /***/ },
-/* 34 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(35)
+	__vue_script__ = __webpack_require__(53)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIModal/CIModal.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(36)
+	__vue_template__ = __webpack_require__(54)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -981,7 +1559,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 35 */
+/* 53 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1095,22 +1673,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 36 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-show=\"isShow\">\n  <div class=\"am-modal\" tabindex=\"-1\"\n    v-bind:class=\"{'am-modal-active': isShow, 'am-modal-lg': lg}\"\n    v-bind:style=\"{'margin-top': marginTop + 'px'}\">\n    <div class=\"am-modal-dialog\">\n      <slot name=\"header\"></slot>\n      <slot name=\"body\"></slot>\n      <slot name=\"footer\"></slot>\n    </div>\n  </div>\n\n  <div class=\"am-dimmer\"\n    v-bind:class=\"{'am-active': isShow}\"\n    v-on:click=\"closeViaDimmer\"\n    transition=\"modal-fade\"></div>\n</div>\n";
 
 /***/ },
-/* 37 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(38)
+	__vue_script__ = __webpack_require__(56)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIModal/CIActions.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(39)
+	__vue_template__ = __webpack_require__(57)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1129,7 +1707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 38 */
+/* 56 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1257,22 +1835,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 39 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-show=\"isShow\">\n  <div class=\"am-modal-actions am-modal-active\">\n    <div class=\"am-modal-actions-group\">\n      <ul class=\"am-list\">\n        <li v-for=\"(index, item) in items\"\n          v-bind:class=\"[item.className, {'ci-selected': selectedIndex == index}]\"\n          v-on:click=\"clickItem(index, item)\">\n          <a v-if=\"item.path\" v-link=\"{path: item.path}\">{{item.text}}</a>\n          <a v-else href=\"javascritp:;\">{{item.text}}</a>\n        </li>\n      </ul>\n    </div>\n\n    <div class=\"am-modal-actions-group\">\n      <button class=\"am-btn am-btn-secondary am-btn-block\"\n        v-on:click=\"close\">{{cancelText}}</button>\n    </div>\n  </div>\n\n  <div class=\"am-dimmer\"\n    v-bind:class=\"{'am-active': isShow}\"\n    v-on:click=\"closeViaDimmer\"></div>\n</div>\n";
 
 /***/ },
-/* 40 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(41)
+	__vue_script__ = __webpack_require__(59)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIModal/CIAlert.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(42)
+	__vue_template__ = __webpack_require__(60)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1291,7 +1869,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 41 */
+/* 59 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1361,22 +1939,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 42 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<ci-modal v-bind:is-show.sync=\"isShow\" v-bind:is-close-via-dimmer=\"isCloseViaDimmer\">\n  <div class=\"am-modal-hd\" slot=\"header\" v-if=\"title\">{{title}}</div>\n  <div class=\"am-modal-bd\" slot=\"body\"><slot>default alert</slot></div>\n  <div class=\"am-modal-footer\" slot=\"footer\">\n    <span class=\"am-modal-btn\" v-on:click=\"ok\">{{okText}}</span>\n  </div>\n</ci-modal>\n";
 
 /***/ },
-/* 43 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(44)
+	__vue_script__ = __webpack_require__(62)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/js/CIModal/CIConfirm.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(45)
+	__vue_template__ = __webpack_require__(63)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -1395,7 +1973,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 44 */
+/* 62 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1465,13 +2043,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 45 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<ci-modal v-bind:is-show.sync=\"isShow\" v-bind:is-close-via-dimmer=\"false\">\n  <div class=\"am-modal-hd\" slot=\"header\" v-if=\"title\">{{title}}</div>\n  <div class=\"am-modal-bd\" slot=\"body\"><slot>Are you sure ?</slot></div>\n  <div class=\"am-modal-footer\" slot=\"footer\">\n    <span class=\"am-modal-btn\" v-on:click=\"cancel\">{{concelText}}</span>\n    <span class=\"am-modal-btn\" v-on:click=\"ok\">{{okText}}</span>\n  </div>\n</ci-modal>\n";
 
 /***/ },
-/* 46 */
+/* 64 */
 /***/ function(module, exports) {
 
 	'use strict';

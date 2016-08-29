@@ -32,10 +32,10 @@ router.map({
   '/buttons': {
     component: require('./buttons.vue')
   },
-  //
-  // '/form': {
-  //   component: require('./pages/form')
-  // },
+
+  '/form': {
+    component: require('./form.vue')
+  },
 
   '/modals': {
     component: require('./modals.vue')

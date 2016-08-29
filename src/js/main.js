@@ -12,8 +12,15 @@ import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
 import CIButton from './CIButton/CIButton.vue'
 import CILinkButton from './CIButton/CILinkButton.vue'
 
+import CICheckbox from './CIForm/CICheckbox.vue'
+import CIInput from './CIForm/CIInput.vue'
+import CIRadio from './CIForm/CIRadio.vue'
+import CISelect from './CIForm/CISelect.vue'
+
 import CIList from './CIList/CIList.vue'
 import CIListCell from './CIList/CIListCell.vue'
+import CIListCheckbox from './CIList/CIListCheckbox.vue'
+import CIListRadio from './CIList/CIListRadio.vue'
 
 import CILoading from './CILoading/CILoading.vue'
 
@@ -37,8 +44,15 @@ const components = {
   'ci-button': CIButton,
   'ci-link-button': CILinkButton,
 
+  'ci-checkbox': CICheckbox,
+  'ci-input': CIInput,
+  'ci-radio': CIRadio,
+  'ci-select': CISelect,
+
   'ci-list': CIList,
   'ci-list-cell': CIListCell,
+  'ci-list-checkbox': CIListCheckbox,
+  'ci-list-radio': CIListRadio,
 
   'ci-loading': CILoading,
 
