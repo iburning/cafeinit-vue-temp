@@ -60,10 +60,3 @@ export default {
   }
 }
 </script>
-
-
-<style>
-.btn, .am-btn {
-  margin-bottom: 1em;
-}
-</style>

@@ -10,7 +10,7 @@ import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
 import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
 
 import CIButton from './CIButton/CIButtonBootstrap.vue'
-import CILinkButton from './CIButton/CILinkButton.vue'
+import CILinkButton from './CIButton/CILinkButtonBootstrap.vue'
 
 import CICheckbox from './CIForm/CICheckbox.vue'
 import CIInput from './CIForm/CIInput.vue'
@@ -27,9 +27,9 @@ import CILoading from './CILoading/CILoading.vue'
 import CIGrid from './CIGrid/CIGrid.vue'
 import CIGridCell from './CIGrid/CIGridCell.vue'
 
-import CIModal from './CIModal/CIModal.vue'
+import CIModal from './CIModal/CIModalBootstrap.vue'
 import CIActions from './CIModal/CIActions.vue'
-import CIAlert from './CIModal/CIAlert.vue'
+import CIAlert from './CIModal/CIAlertBootstrap.vue'
 import CIConfirm from './CIModal/CIConfirm.vue'
 
 import CITabBar from './CITabView/CITabBar.vue'

@@ -1,9 +1,9 @@
 <template>
   <div class="ci-btn-area">
-    <a class="am-btn am-btn-primary am-btn-block" href="javascript:;" v-on:click="isShowModal = true">点击显示Modal</a>
-    <a class="am-btn am-btn-primary am-btn-block" href="javascript:;" v-on:click="isShowAlert = true">点击显示Alert</a>
-    <a class="am-btn am-btn-primary am-btn-block" href="javascript:;" v-on:click="isShowConfirm = true">点击显示Confirm</a>
-    <a class="am-btn am-btn-primary am-btn-block" href="javascript:;" v-on:click="isShowActions = true">点击显示Actions</a>
+    <ci-link-button style="primary" block="block" v-on:click="isShowModal = true">点击显示Modal</ci-link-button>
+    <ci-link-button style="primary" block="block" v-on:click="isShowAlert = true">点击显示Alert</ci-link-button>
+    <ci-link-button style="primary" block="block" href="javascript:;" v-on:click="isShowConfirm = true">点击显示Confirm</ci-link-button>
+    <ci-link-button style="primary" block="block" href="javascript:;" v-on:click="isShowActions = true">点击显示Actions</ci-link-button>
   </div>
 
   <ci-modal v-bind:is-show.sync="isShowModal">

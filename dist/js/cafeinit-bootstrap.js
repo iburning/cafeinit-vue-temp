@@ -90,9 +90,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _CIButtonBootstrap2 = _interopRequireDefault(_CIButtonBootstrap);
 
-	var _CILinkButton = __webpack_require__(35);
+	var _CILinkButtonBootstrap = __webpack_require__(90);
 
-	var _CILinkButton2 = _interopRequireDefault(_CILinkButton);
+	var _CILinkButtonBootstrap2 = _interopRequireDefault(_CILinkButtonBootstrap);
 
 	var _CICheckbox = __webpack_require__(38);
 
@@ -138,17 +138,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _CIGridCell2 = _interopRequireDefault(_CIGridCell);
 
-	var _CIModal = __webpack_require__(71);
+	var _CIModalBootstrap = __webpack_require__(93);
 
-	var _CIModal2 = _interopRequireDefault(_CIModal);
+	var _CIModalBootstrap2 = _interopRequireDefault(_CIModalBootstrap);
 
 	var _CIActions = __webpack_require__(74);
 
 	var _CIActions2 = _interopRequireDefault(_CIActions);
 
-	var _CIAlert = __webpack_require__(77);
+	var _CIAlertBootstrap = __webpack_require__(100);
 
-	var _CIAlert2 = _interopRequireDefault(_CIAlert);
+	var _CIAlertBootstrap2 = _interopRequireDefault(_CIAlertBootstrap);
 
 	var _CIConfirm = __webpack_require__(80);
 
@@ -171,7 +171,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  'ci-block-header': _CIBlockHeader2.default,
 
 	  'ci-button': _CIButtonBootstrap2.default,
-	  'ci-link-button': _CILinkButton2.default,
+	  'ci-link-button': _CILinkButtonBootstrap2.default,
 
 	  'ci-checkbox': _CICheckbox2.default,
 	  'ci-input': _CIInput2.default,
@@ -185,9 +185,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  'ci-loading': _CILoading2.default,
 
-	  'ci-modal': _CIModal2.default,
+	  'ci-modal': _CIModalBootstrap2.default,
 	  'ci-actions': _CIActions2.default,
-	  'ci-alert': _CIAlert2.default,
+	  'ci-alert': _CIAlertBootstrap2.default,
 	  'ci-confirm': _CIConfirm2.default
 
 	}, (0, _defineProperty3.default)(_components, 'ci-loading', _CILoading2.default), (0, _defineProperty3.default)(_components, 'ci-grid', _CIGrid2.default), (0, _defineProperty3.default)(_components, 'ci-grid-cell', _CIGridCell2.default), (0, _defineProperty3.default)(_components, 'ci-tab-bar', _CITabBar2.default), _components);
@@ -747,114 +747,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(36)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/CIButton/CILinkButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(37)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./CILinkButton.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <a class="am-btn"
-	//     href="{{href}}"
-	//     v-bind:class="[
-	//       'am-btn-' + style,
-	//       size ? ('am-btn-' + size) : '',
-	//       radius ? 'am-radius' : '',
-	//       round ? 'am-round' : '',
-	//       (status === 'actived') ? 'am-active' :'',
-	//       block ? 'am-btn-block' : ''
-	//     ]"
-	//     v-bind:disabled="status === 'disabled' || status === 'loading'">
-	//     <span class="am-icon-circle-o-notch am-icon-spin" v-if="status === 'loading'"></span>
-	//     <slot>This is a button</slot>
-	//   </a>
-	// </template>
-	//
-	//
-	// <script>
-	exports.default = {
-	  props: {
-	    style: {
-	      type: String,
-	      default: 'default'
-	    },
-
-	    size: {
-	      type: String,
-	      default: ''
-	    },
-
-	    block: {
-	      type: String,
-	      default: ''
-	    },
-
-	    radius: {
-	      type: String,
-	      default: ''
-	    },
-
-	    round: {
-	      type: String,
-	      default: ''
-	    },
-
-	    status: {
-	      type: String,
-	      default: ''
-	    },
-
-	    href: {
-	      type: String,
-	      default: 'javascript:;'
-	    }
-	  },
-
-	  methods: {
-	    click: function click() {
-	      this.$emit('click');
-	    }
-	  }
-	};
-	// </script>
-
-/***/ },
-/* 37 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<a class=\"am-btn\"\n  href=\"{{href}}\"\n  v-bind:class=\"[\n    'am-btn-' + style,\n    size ? ('am-btn-' + size) : '',\n    radius ? 'am-radius' : '',\n    round ? 'am-round' : '',\n    (status === 'actived') ? 'am-active' :'',\n    block ? 'am-btn-block' : ''\n  ]\"\n  v-bind:disabled=\"status === 'disabled' || status === 'loading'\">\n  <span class=\"am-icon-circle-o-notch am-icon-spin\" v-if=\"status === 'loading'\"></span>\n  <slot>This is a button</slot>\n</a>\n";
-
-/***/ },
+/* 35 */,
+/* 36 */,
+/* 37 */,
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1725,154 +1620,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = "\n<li class=\"ci-grid-cell\">\n  <slot></slot>\n</li>\n";
 
 /***/ },
-/* 71 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(72)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/CIModal/CIModal.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(73)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./CIModal.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 72 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <div v-show="isShow">
-	//     <div class="am-modal" tabindex="-1"
-	//       v-bind:class="{'am-modal-active': isShow, 'am-modal-lg': lg}"
-	//       v-bind:style="{'margin-top': marginTop + 'px'}">
-	//       <div class="am-modal-dialog">
-	//         <slot name="header"></slot>
-	//         <slot name="body"></slot>
-	//         <slot name="footer"></slot>
-	//       </div>
-	//     </div>
-	//
-	//     <div class="am-dimmer"
-	//       v-bind:class="{'am-active': isShow}"
-	//       v-on:click="closeViaDimmer"
-	//       transition="modal-fade"></div>
-	//   </div>
-	// </template>
-	//
-	//
-	// <script>
-	exports.default = {
-	  props: {
-	    isShow: {
-	      type: Boolean,
-	      default: false,
-	      twoWay: true
-	    },
-
-	    isCloseViaDimmer: { // 是否通过点击遮罩层关闭模态框，默认为true
-	      type: Boolean,
-	      default: true
-	    },
-
-	    lg: {
-	      type: Boolean,
-	      default: false
-	    },
-
-	    marginTop: {
-	      type: Number,
-	      default: 0
-	    }
-	  },
-
-	  transitions: {
-	    'modal-fade': {
-	      beforeEnter: function beforeEnter(el) {
-	        // ...
-	      },
-	      enter: function enter(el) {
-	        // ...
-	      },
-	      afterEnter: function afterEnter(el) {
-	        // ...
-	      },
-	      enterCancelled: function enterCancelled(el) {
-	        // ...
-	      },
-	      beforeLeave: function beforeLeave(el) {
-	        // ...
-	      },
-	      leave: function leave(el) {
-	        // ...
-	      },
-	      afterLeave: function afterLeave(el) {
-	        // ...
-	      },
-	      leaveCancelled: function leaveCancelled(el) {
-	        // ...
-	      }
-	    }
-	  },
-
-	  ready: function ready() {
-	    // ...
-	  },
-
-
-	  watch: {
-	    isShow: function isShow(val, oldVal) {
-	      // console.log('modal', this.$el, this)
-	      if (val) {
-	        var dialog = this.$el.querySelector('.am-modal');
-	        this.marginTop = -parseInt(dialog.offsetHeight / 2);
-	      }
-	    }
-	  },
-
-	  methods: {
-	    show: function show() {
-	      this.isShow = true;
-	    },
-	    close: function close() {
-	      this.isShow = false;
-	    },
-	    closeViaDimmer: function closeViaDimmer() {
-	      if (this.isCloseViaDimmer) {
-	        this.isShow = false;
-	      }
-	    }
-	  }
-	};
-	// </script>
-
-/***/ },
-/* 73 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div v-show=\"isShow\">\n  <div class=\"am-modal\" tabindex=\"-1\"\n    v-bind:class=\"{'am-modal-active': isShow, 'am-modal-lg': lg}\"\n    v-bind:style=\"{'margin-top': marginTop + 'px'}\">\n    <div class=\"am-modal-dialog\">\n      <slot name=\"header\"></slot>\n      <slot name=\"body\"></slot>\n      <slot name=\"footer\"></slot>\n    </div>\n  </div>\n\n  <div class=\"am-dimmer\"\n    v-bind:class=\"{'am-active': isShow}\"\n    v-on:click=\"closeViaDimmer\"\n    transition=\"modal-fade\"></div>\n</div>\n";
-
-/***/ },
+/* 71 */,
+/* 72 */,
+/* 73 */,
 /* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2035,110 +1785,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = "\n<div v-show=\"isShow\">\n  <div class=\"am-modal-actions am-modal-active\">\n    <div class=\"am-modal-actions-group\">\n      <ul class=\"am-list\">\n        <li v-for=\"(index, item) in items\"\n          v-bind:class=\"[item.className, {'ci-selected': selectedIndex == index}]\"\n          v-on:click=\"clickItem(index, item)\">\n          <a v-if=\"item.path\" v-link=\"{path: item.path}\">{{item.text}}</a>\n          <a v-else href=\"javascritp:;\">{{item.text}}</a>\n        </li>\n      </ul>\n    </div>\n\n    <div class=\"am-modal-actions-group\">\n      <button class=\"am-btn am-btn-secondary am-btn-block\"\n        v-on:click=\"close\">{{cancelText}}</button>\n    </div>\n  </div>\n\n  <div class=\"am-dimmer\"\n    v-bind:class=\"{'am-active': isShow}\"\n    v-on:click=\"closeViaDimmer\"></div>\n</div>\n";
 
 /***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(78)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/js/CIModal/CIAlert.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(79)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./CIAlert.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 78 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <ci-modal v-bind:is-show.sync="isShow" v-bind:is-close-via-dimmer="isCloseViaDimmer">
-	//     <div class="am-modal-hd" slot="header" v-if="title">{{title}}</div>
-	//     <div class="am-modal-bd" slot="body"><slot>default alert</slot></div>
-	//     <div class="am-modal-footer" slot="footer">
-	//       <span class="am-modal-btn" v-on:click="ok">{{okText}}</span>
-	//     </div>
-	//   </ci-modal>
-	// </template>
-	//
-	//
-	// <script>
-	exports.default = {
-	  props: {
-	    isShow: {
-	      type: Boolean,
-	      default: false,
-	      twoWay: true
-	    },
-
-	    isCloseViaDimmer: { // 是否通过点击遮罩层关闭模态框，默认为true
-	      type: Boolean,
-	      default: false
-	    },
-
-	    // lg: {
-	    //   type: Boolean,
-	    //   default: false
-	    // },
-
-	    title: {
-	      type: String,
-	      default: ''
-	    },
-
-	    okText: {
-	      type: String,
-	      default: '确认'
-	    }
-	  },
-
-	  ready: function ready() {
-	    // ...
-	  },
-
-
-	  methods: {
-	    show: function show() {
-	      this.isShow = true;
-	    },
-	    hide: function hide() {
-	      this.isShow = false;
-	    },
-	    ok: function ok() {
-	      this.hide();
-	      this.$dispatch('ok');
-	    }
-	  }
-	};
-	// </script>
-
-/***/ },
-/* 79 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<ci-modal v-bind:is-show.sync=\"isShow\" v-bind:is-close-via-dimmer=\"isCloseViaDimmer\">\n  <div class=\"am-modal-hd\" slot=\"header\" v-if=\"title\">{{title}}</div>\n  <div class=\"am-modal-bd\" slot=\"body\"><slot>default alert</slot></div>\n  <div class=\"am-modal-footer\" slot=\"footer\">\n    <span class=\"am-modal-btn\" v-on:click=\"ok\">{{okText}}</span>\n  </div>\n</ci-modal>\n";
-
-/***/ },
+/* 77 */,
+/* 78 */,
+/* 79 */,
 /* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2493,6 +2142,687 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = "\n<button class=\"btn\" type=\"{{type}}\"\n  v-bind:class=\"[\n    'btn-' + style,\n    size ? ('btn-' + size) : '',\n    radius ? 'radius' : '',\n    round ? 'round' : '',\n    (status === 'actived') ? 'active' :'',\n    block ? 'btn-block' : ''\n  ]\"\n  v-bind:disabled=\"status === 'disabled' || status === 'loading'\">\n  <span class=\"icon-circle-o-notch icon-spin\" v-if=\"status === 'loading'\"></span>\n  <slot>This is a button</slot>\n</button>\n";
+
+/***/ },
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(91)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIButton/CILinkButtonBootstrap.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(92)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CILinkButtonBootstrap.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 91 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <a class="btn"
+	//     href="{{href}}"
+	//     v-bind:class="[
+	//       'btn-' + style,
+	//       size ? ('btn-' + size) : '',
+	//       radius ? 'radius' : '',
+	//       round ? 'round' : '',
+	//       (status === 'actived') ? 'am-active' :'',
+	//       block ? 'btn-block' : ''
+	//     ]"
+	//     v-bind:disabled="status === 'disabled' || status === 'loading'">
+	//     <span class="icon-circle-o-notch icon-spin" v-if="status === 'loading'"></span>
+	//     <slot>This is a button</slot>
+	//   </a>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    style: {
+	      type: String,
+	      default: 'default'
+	    },
+
+	    size: {
+	      type: String,
+	      default: ''
+	    },
+
+	    block: {
+	      type: String,
+	      default: ''
+	    },
+
+	    radius: {
+	      type: String,
+	      default: ''
+	    },
+
+	    round: {
+	      type: String,
+	      default: ''
+	    },
+
+	    status: {
+	      type: String,
+	      default: ''
+	    },
+
+	    href: {
+	      type: String,
+	      default: 'javascript:;'
+	    }
+	  },
+
+	  methods: {
+	    click: function click() {
+	      this.$emit('click');
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 92 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<a class=\"btn\"\n  href=\"{{href}}\"\n  v-bind:class=\"[\n    'btn-' + style,\n    size ? ('btn-' + size) : '',\n    radius ? 'radius' : '',\n    round ? 'round' : '',\n    (status === 'actived') ? 'am-active' :'',\n    block ? 'btn-block' : ''\n  ]\"\n  v-bind:disabled=\"status === 'disabled' || status === 'loading'\">\n  <span class=\"icon-circle-o-notch icon-spin\" v-if=\"status === 'loading'\"></span>\n  <slot>This is a button</slot>\n</a>\n";
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(94)
+	__vue_script__ = __webpack_require__(98)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIModal/CIModalBootstrap.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(99)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIModalBootstrap.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(95);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(97)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./CIModalBootstrap.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./CIModalBootstrap.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 95 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(96)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.modal {\n  display: block;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 96 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 97 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+
+		update(obj);
+
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+
+	var replaceText = (function () {
+		var textStore = [];
+
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+
+		if (media) {
+			styleElement.setAttribute("media", media);
+		}
+
+		if (sourceMap) {
+			// https://developer.chrome.com/devtools/docs/javascript-debugging
+			// this makes source maps inside style tags work properly in Chrome
+			css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */';
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+
+
+/***/ },
+/* 98 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div v-show="isShow">
+	//     <div class="modal fade" tabindex="-1" role="dialog"
+	//       v-bind:class="{'in': isShow, 'modal-lg': lg}"
+	//       v-on:click="closeViaDimmer">
+	//       <div class="modal-dialog" role="document"
+	//         v-bind:style="{'margin-top': marginTop + 'px'}">
+	//         <div class="modal-content">
+	//           <slot name="header"></slot>
+	//           <slot name="body"></slot>
+	//           <slot name="footer"></slot>
+	//         </div>
+	//       </div>
+	//     </div>
+	//
+	//     <div class="modal-backdrop fade"
+	//       v-bind:class="{'in': isShow}"
+	//       transition="modal-fade"></div>
+	//   </div>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    isShow: {
+	      type: Boolean,
+	      default: false,
+	      twoWay: true
+	    },
+
+	    isCloseViaDimmer: { // 是否通过点击遮罩层关闭模态框，默认为true
+	      type: Boolean,
+	      default: true
+	    },
+
+	    lg: {
+	      type: Boolean,
+	      default: false
+	    },
+
+	    marginTop: {
+	      type: Number,
+	      default: 0
+	    }
+	  },
+
+	  transitions: {
+	    'modal-fade': {
+	      beforeEnter: function beforeEnter(el) {
+	        // ...
+	      },
+	      enter: function enter(el) {
+	        // ...
+	      },
+	      afterEnter: function afterEnter(el) {
+	        // ...
+	      },
+	      enterCancelled: function enterCancelled(el) {
+	        // ...
+	      },
+	      beforeLeave: function beforeLeave(el) {
+	        // ...
+	      },
+	      leave: function leave(el) {
+	        // ...
+	      },
+	      afterLeave: function afterLeave(el) {
+	        // ...
+	      },
+	      leaveCancelled: function leaveCancelled(el) {
+	        // ...
+	      }
+	    }
+	  },
+
+	  ready: function ready() {
+	    // ...
+	  },
+
+
+	  watch: {
+	    isShow: function isShow(val, oldVal) {
+	      // console.log('modal', this.$el, this)
+	      if (val) {
+	        var dialog = this.$el.querySelector('.modal-dialog');
+	        // this.marginTop = - parseInt(dialog.offsetHeight / 2)
+	        this.marginTop = 200;
+	      }
+	    }
+	  },
+
+	  methods: {
+	    show: function show() {
+	      this.isShow = true;
+	    },
+	    close: function close() {
+	      this.isShow = false;
+	    },
+	    closeViaDimmer: function closeViaDimmer() {
+	      if (this.isCloseViaDimmer) {
+	        this.isShow = false;
+	      }
+	    }
+	  }
+	};
+	// </script>
+	//
+	//
+	// <style>
+	// .modal {
+	//   display: block;
+	// }
+	// </style>
+
+/***/ },
+/* 99 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div v-show=\"isShow\">\n  <div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n    v-bind:class=\"{'in': isShow, 'modal-lg': lg}\"\n    v-on:click=\"closeViaDimmer\">\n    <div class=\"modal-dialog\" role=\"document\"\n      v-bind:style=\"{'margin-top': marginTop + 'px'}\">\n      <div class=\"modal-content\">\n        <slot name=\"header\"></slot>\n        <slot name=\"body\"></slot>\n        <slot name=\"footer\"></slot>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"modal-backdrop fade\"\n    v-bind:class=\"{'in': isShow}\"\n    transition=\"modal-fade\"></div>\n</div>\n";
+
+/***/ },
+/* 100 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(101)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/js/CIModal/CIAlertBootstrap.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(102)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./CIAlertBootstrap.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 101 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <ci-modal v-bind:is-show.sync="isShow" v-bind:is-close-via-dimmer="isCloseViaDimmer">
+	//     <div class="modal-header" slot="header" v-if="title">
+	//       <h4 class="modal-title">{{title}}</h4>
+	//     </div>
+	//     <div class="modal-body" slot="body"><slot>default alert</slot></div>
+	//     <div class="modal-footer" slot="footer">
+	//       <span class="btn btn-default" v-on:click="ok">{{okText}}</span>
+	//     </div>
+	//   </ci-modal>
+	// </template>
+	//
+	//
+	// <script>
+	exports.default = {
+	  props: {
+	    isShow: {
+	      type: Boolean,
+	      default: false,
+	      twoWay: true
+	    },
+
+	    title: {
+	      type: String,
+	      default: ''
+	    },
+
+	    okText: {
+	      type: String,
+	      default: '确认'
+	    }
+	  },
+
+	  ready: function ready() {
+	    // ...
+	  },
+
+
+	  methods: {
+	    show: function show() {
+	      this.isShow = true;
+	    },
+	    hide: function hide() {
+	      this.isShow = false;
+	    },
+	    ok: function ok() {
+	      this.hide();
+	      this.$dispatch('ok');
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 102 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<ci-modal v-bind:is-show.sync=\"isShow\" v-bind:is-close-via-dimmer=\"isCloseViaDimmer\">\n  <div class=\"modal-header\" slot=\"header\" v-if=\"title\">\n    <h4 class=\"modal-title\">{{title}}</h4>\n  </div>\n  <div class=\"modal-body\" slot=\"body\"><slot>default alert</slot></div>\n  <div class=\"modal-footer\" slot=\"footer\">\n    <span class=\"btn btn-default\" v-on:click=\"ok\">{{okText}}</span>\n  </div>\n</ci-modal>\n";
 
 /***/ }
 /******/ ])
