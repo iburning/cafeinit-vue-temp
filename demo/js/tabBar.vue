@@ -23,8 +23,8 @@ export default {
   ready() {
     this.$refs.myTabBar.items = this.tabBarItems
     this.$refs.myTabBar.selectedIndex = 1
-    this.$refs.myTabBar.$on('item_click', function (index) {
-      console.log('myTabBar item_click', index)
+    this.$refs.myTabBar.$on('item-click', function (index) {
+      console.log('myTabBar item-click', index)
     })
   }
 }
