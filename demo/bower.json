@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "amazeui": "2.5.2",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.7"
   }
 }

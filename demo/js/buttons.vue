@@ -63,7 +63,7 @@ export default {
 
 
 <style>
-.am-btn {
+.btn, .am-btn {
   margin-bottom: 1em;
 }
 </style>

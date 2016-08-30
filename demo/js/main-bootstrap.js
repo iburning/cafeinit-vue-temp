@@ -1,12 +1,12 @@
 /**
- * @fileOverview main
+ * @fileOverview main for bootstrap
  * @author: burning <www.cafeinit.com>
- * @date: 2016-08-25
+ * @date: 2016-08-31
  */
 
 import Vue from 'vue';
 import VueRouter from 'vue-router'
-import Cafeinit from 'cafeinit'
+import Cafeinit from 'cafeinit-bootstrap'
 import CafeinitStyle from 'cafeinit.css'
 
 Vue.use(VueRouter)

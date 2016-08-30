@@ -7,12 +7,15 @@
 var path = require('path')
 
 module.exports = {
-  entry: path.resolve(__dirname, './js/main.js'),
+  entry: {
+    'main': path.resolve(__dirname, './js/main.js'),
+    'main-bootstrap': path.resolve(__dirname, './js/main-bootstrap.js')
+  },
 
   output: {
     path: path.resolve(__dirname, './js'),
     publicPath: '/js/',       // important for dev-server
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
 
   module: {
@@ -61,7 +64,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      'cafeinit-vue': path.resolve(__dirname, '../dist/js/cafeinit-vue.js'),
+      'cafeinit': path.resolve(__dirname, '../dist/js/cafeinit.js'),
+      'cafeinit-bootstrap': path.resolve(__dirname, '../dist/js/cafeinit-bootstrap.js'),
       'cafeinit.css': path.resolve(__dirname, '../dist/css/cafeinit.css')
     }
   }

@@ -5,11 +5,14 @@
  */
 
 module.exports = {
-  entry: './src/js/main.js',
+  entry: {
+    'cafeinit': './src/js/main.js',
+    'cafeinit-bootstrap': './src/js/mainForBootStrap.js'
+  },
 
   output: {
     path: './dist/js',
-    filename: 'cafeinit-vue.js',
+    filename: '[name].js',
     library: 'cafeinit-vue',
     libraryTarget: 'umd'
   },
