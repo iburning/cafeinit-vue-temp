@@ -115,7 +115,7 @@ export default {
     clickItem(index, item) {
       this.selectedIndex = index
       this.isShow = false
-      this.$dispatch('click-item', index, item)
+      this.$dispatch('item-click', index, item)
     }
   }
 }

@@ -3,7 +3,7 @@
     <ul class="ci-tab-bar-items">
       <li class="ci-tab-bar-item" v-for="(index, item) in items"
         v-bind:class="[item.className, {'ci-selected': selectedIndex == index}]"
-        v-on:click="itemOnClick(index, item)">
+        v-on:click="clickItem(index, item)">
         <a v-if="item.path" v-link="{path: item.path}">{{item.text}}</a>
         <a v-else href="javascritp:;">{{item.text}}</a>
       </li>
@@ -33,9 +33,9 @@ export default {
   },
 
   methods: {
-    itemOnClick(index, item) {
+    clickItem(index, item) {
       this.selectedIndex = index
-      this.$emit('on_item_click', index, item)
+      this.$dispatch('item-click', index, item)
     }
   }
 }

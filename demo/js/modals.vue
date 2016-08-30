@@ -24,7 +24,7 @@
       { className: 'btn-friends', text: 'Friends' }
     ]"
     cancel-text="Cancel"
-    v-on:click-item="actionOnClickItem"></ci-actions>
+    v-on:item-click="actionOnItemClick"></ci-actions>
 </template>
 
 
@@ -61,8 +61,8 @@ export default {
       console.log('confirmCancel')
     },
 
-    actionOnClickItem(index, item) {
-      console.log('actionOnClickItem', index, item)
+    actionOnItemClick(index, item) {
+      console.log('actionOnItemClick', index, item)
     }
   }
 }
