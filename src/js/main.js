@@ -80,8 +80,8 @@ const utils = {
 }
 
 function components(Vue) {
-  for (tagName in CIomponents) {
-    Vue.component(tagName, CIomponents[tagName])
+  for (let name in CIomponents) {
+    Vue.component(name, CIomponents[name])
   }
 }
 
