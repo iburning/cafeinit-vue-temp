@@ -27,7 +27,7 @@ import CILoading from './CILoading/CILoading.vue'
 import CIGrid from './CIGrid/CIGrid.vue'
 import CIGridCell from './CIGrid/CIGridCell.vue'
 
-import CIModal from './CIModal/CIModalBootstrap.vue'
+import CIModal from './CIModal/CIModal.vue'
 import CIActions from './CIModal/CIActions.vue'
 import CIAlert from './CIModal/CIAlertBootstrap.vue'
 import CIConfirm from './CIModal/CIConfirm.vue'
@@ -72,14 +72,7 @@ const components = {
   'ci-tab-bar': CITabBar,
 }
 
-// export default function (Vue) {
-//   for (name in components) {
-//     Vue.component(name, components[name]);
-//   }
-// }
-
-
-export default {
+const CafeinitVue = window.CafeinitVue = {
   components: (Vue) => {
     for (name in components) {
       Vue.component(name, components[name]);
@@ -90,3 +83,5 @@ export default {
     CIScrollHelper: CIScrollHelper
   }
 }
+
+export default CafeinitVue

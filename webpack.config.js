@@ -14,7 +14,7 @@ module.exports = {
     path: './dist/js',
     filename: '[name].js',
     library: 'cafeinit-vue',
-    libraryTarget: 'umd'
+    libraryTarget: 'amd'  // Export to AMD (optionally named - set the name via the library option)
   },
 
   module: {
