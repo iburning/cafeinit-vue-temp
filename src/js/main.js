@@ -72,22 +72,9 @@ const CIomponents = {
   'ci-tab-bar': CITabBar,
 }
 
-// const name = 'CafeinitVue'
-// const ver = '1.0.0'
-//
-// const utils = {
-//   CIScrollHelper: CIScrollHelper
-// }
-//
-// function components(Vue) {
-//   for (let name in CIomponents) {
-//     Vue.component(name, CIomponents[name])
-//   }
-// }
-//
-// export { name, ver, components, utils }
 
-export default {
+// export default {
+module.exports = {
   name: 'CafeinitVue',
   ver: '1.0.0',
 

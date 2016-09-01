@@ -27,10 +27,10 @@ import CILoading from './CILoading/CILoading.vue'
 import CIGrid from './CIGrid/CIGrid.vue'
 import CIGridCell from './CIGrid/CIGridCell.vue'
 
-import CIModal from './CIModal/CIModal.vue'
+import CIModal from './CIModal/CIModalBootstrap.vue'
 import CIActions from './CIModal/CIActions.vue'
 import CIAlert from './CIModal/CIAlertBootstrap.vue'
-import CIConfirm from './CIModal/CIConfirm.vue'
+import CIConfirm from './CIModal/CIConfirmBootstrap.vue'
 
 import CITabBar from './CITabView/CITabBar.vue'
 
@@ -73,23 +73,8 @@ const CIomponents = {
 }
 
 
-// const name = 'CafeinitVue for Bootstrap'
-// const ver = '1.0.0'
-//
-// const utils = {
-//   CIScrollHelper: CIScrollHelper
-// }
-//
-// function components(Vue) {
-//   for (let name in CIomponents) {
-//     Vue.component(name, CIomponents[name])
-//   }
-// }
-//
-// export { name, ver, components, utils }
-
-
-export default {
+// export default {
+module.exports = {
   name: 'CafeinitVue for Bootstrap',
   ver: '1.0.0',
 

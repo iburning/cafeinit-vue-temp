@@ -1,15 +1,10 @@
 <template>
   <div class="ci-btn-area">
-    <ci-link-button style="primary" block="block" v-on:click="isShowModal = true">点击显示Modal</ci-link-button>
     <ci-link-button style="primary" block="block" v-on:click="isShowAlert = true">点击显示Alert</ci-link-button>
     <ci-link-button style="primary" block="block" href="javascript:;" v-on:click="isShowConfirm = true">点击显示Confirm</ci-link-button>
     <ci-link-button style="primary" block="block" href="javascript:;" v-on:click="isShowActions = true">点击显示Actions</ci-link-button>
   </div>
 
-  <ci-modal v-bind:is-show.sync="isShowModal">
-    <div class="am-modal-hd" slot="header">CIModal</div>
-    <div class="am-modal-bd" slot="body">CIModal Content</div>
-  </ci-modal>
 
   <ci-alert v-bind:is-show.sync="isShowAlert" v-on:ok="alertOnOK">Alert Content</ci-alert>
 
@@ -32,7 +27,6 @@
 export default {
   data() {
     return {
-      isShowModal: false,
       isShowAlert: false,
       isShowConfirm: false,
       isShowActions: false,

@@ -4,6 +4,8 @@
  * @date: 2016-08-26
  */
 
+var webpack = require('webpack');
+
 module.exports = {
   entry: {
     'cafeinit-vue': './src/js/main.js',
@@ -26,6 +28,12 @@ module.exports = {
       },
 
       {
+        // use css-loader for *.css files
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+
+      {
         // use babel-loader for *.js files
         test: /\.js$/,
         loader: 'babel',
@@ -41,5 +49,18 @@ module.exports = {
   babel: {
     presets: ['es2015'],
     plugins: ['transform-runtime']
-  }
+  },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ]
 }

@@ -51,8 +51,7 @@
 
 
   <div class="ci-btn-area">
-    <a class="am-btn am-btn-primary am-btn-block" href="javascript:;"
-      v-on:click="save">保存</a>
+    <ci-button style="primary" block="block" v-on:click="save">保存</ci-button>
   </div>
   </template>
 
