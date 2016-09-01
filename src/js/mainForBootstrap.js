@@ -83,4 +83,6 @@ const utils = {
   CIScrollHelper: CIScrollHelper
 }
 
-export { install, utils }
+const ver = '1.0.0'
+
+export { ver, install, utils }
