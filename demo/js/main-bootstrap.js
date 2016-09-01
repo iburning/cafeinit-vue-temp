@@ -6,11 +6,11 @@
 
 import Vue from 'vue';
 import VueRouter from 'vue-router'
-import Cafeinit from 'cafeinit-bootstrap'
+import CafeinitVue from 'cafeinit-vue-bootstrap'
 import CafeinitStyle from 'cafeinit.css'
 
 Vue.use(VueRouter)
-Vue.use(Cafeinit.components)
+Vue.use(CafeinitVue.components)
 
 var App = Vue.extend({})
 var router = window.__router = new VueRouter()

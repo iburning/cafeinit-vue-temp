@@ -73,17 +73,33 @@ const CIomponents = {
 }
 
 
-const name = 'CafeinitVue for Bootstrap'
-const ver = '1.0.0'
+// const name = 'CafeinitVue for Bootstrap'
+// const ver = '1.0.0'
+//
+// const utils = {
+//   CIScrollHelper: CIScrollHelper
+// }
+//
+// function components(Vue) {
+//   for (let name in CIomponents) {
+//     Vue.component(name, CIomponents[name])
+//   }
+// }
+//
+// export { name, ver, components, utils }
 
-const utils = {
-  CIScrollHelper: CIScrollHelper
-}
 
-function components(Vue) {
-  for (let name in CIomponents) {
-    Vue.component(name, CIomponents[name])
+export default {
+  name: 'CafeinitVue for Bootstrap',
+  ver: '1.0.0',
+
+  components: (Vue) => {
+    for (let name in CIomponents) {
+      Vue.component(name, CIomponents[name])
+    }
+  },
+
+  utils: {
+    CIScrollHelper: CIScrollHelper
   }
 }
-
-export { name, ver, components, utils }

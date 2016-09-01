@@ -2,7 +2,7 @@
   "name": "cafeinit-vue",
   "version": "1.0.0",
   "description": "CafeInit Vue.js",
-  "main": "dist/js/cafeinit.js",
+  "main": "dist/js/cafeinit-vue.amd.js",
   "scripts": {
     "build": "webpack -p --config ./webpack.config.js",
     "build-amd": "webpack -p --config ./webpack.config.amd.js",

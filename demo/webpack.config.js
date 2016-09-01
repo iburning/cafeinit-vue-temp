@@ -64,8 +64,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      'cafeinit': path.resolve(__dirname, '../dist/js/cafeinit.js'),
-      'cafeinit-bootstrap': path.resolve(__dirname, '../dist/js/cafeinit-bootstrap.js'),
+      'cafeinit-vue': path.resolve(__dirname, '../dist/js/cafeinit-vue.amd.js'),
+      'cafeinit-vue-bootstrap': path.resolve(__dirname, '../dist/js/cafeinit-vue-bootstrap.amd.js'),
       'cafeinit.css': path.resolve(__dirname, '../dist/css/cafeinit.css')
     }
   }
