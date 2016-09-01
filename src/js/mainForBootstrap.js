@@ -72,14 +72,15 @@ const components = {
   'ci-tab-bar': CITabBar,
 }
 
-export default {
-  components: (Vue) => {
-    for (name in components) {
-      Vue.component(name, components[name]);
-    }
-  },
 
-  utils: {
-    CIScrollHelper: CIScrollHelper
+function install(Vue) {
+  for (name in components) {
+    Vue.component(name, components[name]);
   }
 }
+
+const utils = {
+  CIScrollHelper: CIScrollHelper
+}
+
+export { install, utils }
