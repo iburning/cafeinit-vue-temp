@@ -38,7 +38,7 @@ import CITabBar from './CITabView/CITabBar.vue'
 import CIScrollHelper from './utils/CIScrollHelper'
 
 
-const components = {
+const CIomponents = {
   'ci-block': CIBlock,
   'ci-block-body': CIBlockBody,
   'ci-block-footer': CIBlockFooter,
@@ -72,14 +72,17 @@ const components = {
   'ci-tab-bar': CITabBar,
 }
 
-export default {
-  components: (Vue) => {
-    for (name in components) {
-      Vue.component(name, components[name]);
-    }
-  },
+const name = 'CafeinitVue'
+const ver = '1.0.0'
 
-  utils: {
-    CIScrollHelper: CIScrollHelper
+const utils = {
+  CIScrollHelper: CIScrollHelper
+}
+
+function components(Vue) {
+  for (tagName in CIomponents) {
+    Vue.component(tagName, CIomponents[tagName])
   }
 }
+
+export { name, ver, components, utils }
