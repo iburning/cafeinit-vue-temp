@@ -82,7 +82,7 @@ const utils = {
 
 function components(Vue) {
   for (let name in CIomponents) {
-    Vue.component(item, CIomponents[item])
+    Vue.component(name, CIomponents[name])
   }
 }
 
