@@ -2,9 +2,10 @@
   "name": "cafeinit-vue",
   "version": "1.0.0",
   "description": "CafeInit Vue.js",
-  "main": "dist/js/cafeinit-vue.js",
+  "main": "dist/js/cafeinit.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack -p --config ./webpack.config.js",
+    "build-amd": "webpack -p --config ./webpack.config.amd.js",
     "dev": "webpack-dev-server --inline --config demo/webpack.config.js --content-base demo/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

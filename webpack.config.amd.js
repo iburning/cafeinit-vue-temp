@@ -12,9 +12,9 @@ module.exports = {
 
   output: {
     path: './dist/js',
-    filename: '[name].js',
+    filename: '[name].amd.js',
     library: 'CafeinitVue',
-    libraryTarget: 'var'  // Export by setting a variable: var Library = xxx (default)
+    libraryTarget: 'amd'  // Export to AMD (optionally named - set the name via the library option)
   },
 
   module: {

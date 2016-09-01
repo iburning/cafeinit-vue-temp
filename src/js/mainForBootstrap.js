@@ -72,7 +72,7 @@ const components = {
   'ci-tab-bar': CITabBar,
 }
 
-const CafeinitVue = window.CafeinitVue = {
+export default {
   components: (Vue) => {
     for (name in components) {
       Vue.component(name, components[name]);
@@ -83,5 +83,3 @@ const CafeinitVue = window.CafeinitVue = {
     CIScrollHelper: CIScrollHelper
   }
 }
-
-export default CafeinitVue

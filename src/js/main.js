@@ -72,13 +72,6 @@ const components = {
   'ci-tab-bar': CITabBar,
 }
 
-// export default function (Vue) {
-//   for (name in components) {
-//     Vue.component(name, components[name]);
-//   }
-// }
-
-
 export default {
   components: (Vue) => {
     for (name in components) {
