@@ -9,7 +9,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: {
     'cafeinit-vue': './src/js/main.js',
-    'cafeinit-vue-bootstrap': './src/js/mainForBootStrap.js'
+    'cafeinit-vue-bootstrap': './src/js/mainForBootstrap.js'
   },
 
   output: {

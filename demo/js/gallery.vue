@@ -1,37 +1,37 @@
 <template>
-  <ci-grid class="items">
-    <ci-grid-cell>
+  <ci-gallery class="items">
+    <ci-gallery-cell>
       <div class="item">1</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">2</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">3</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">4</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">5</div>
-    </ci-grid-cell>
+    </ci-gallery-cell>
 
-    <ci-grid-cell>
+    <ci-gallery-cell>
       <div class="item">1</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">2</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">3</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">4</div>
-    </ci-grid-cell>
-    <ci-grid-cell>
+    </ci-gallery-cell>
+    <ci-gallery-cell>
       <div class="item">5</div>
-    </ci-grid-cell>
-  </ci-grid>
+    </ci-gallery-cell>
+  </ci-gallery>
 </template>
 
 

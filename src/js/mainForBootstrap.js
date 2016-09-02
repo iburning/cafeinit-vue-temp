@@ -5,37 +5,37 @@
  */
 
 
-import BSButton from './CIButton/BSButton.vue'
-import BSLinkButton from './CIButton/BSLinkButton.vue'
+import BSButton from './button/BSButton.vue'
+import BSLinkButton from './button/BSLinkButton.vue'
 
-import BSCheckbox from './CIForm/BSCheckbox.vue'
-import BSInput from './CIForm/BSInput.vue'
-import BSRadio from './CIForm/BSRadio.vue'
-import BSSelect from './CIForm/BSSelect.vue'
-import BSTable from './CITable/CITableBootstrap.vue'
+import BSModal from './modal/BSModal.vue'
+import BSActions from './modal/BSActions.vue'
+import BSAlert from './modal/BSAlert.vue'
+import BSConfirm from './modal/BSConfirm.vue'
+
+import BSCheckbox from './form/BSCheckbox.vue'
+import BSInput from './form/BSInput.vue'
+import BSRadio from './form/BSRadio.vue'
+import BSSelect from './form/BSSelect.vue'
+import BSTable from './table/BSTable.vue'
 
 
-import CIBlock from './CIBlock/CIBlock.vue'
-import CIBlockBody from './CIBlock/CIBlockBody.vue'
-import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
-import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
+import CIBlock from './block/CIBlock.vue'
+import CIBlockBody from './block/CIBlockBody.vue'
+import CIBlockFooter from './block/CIBlockFooter.vue'
+import CIBlockHeader from './block/CIBlockHeader.vue'
 
-import CIList from './CIList/CIList.vue'
-import CIListCell from './CIList/CIListCell.vue'
-import CIListCheckbox from './CIList/CIListCheckbox.vue'
-import CIListRadio from './CIList/CIListRadio.vue'
+import CIList from './list/CIList.vue'
+import CIListCell from './list/CIListCell.vue'
+import CIListCheckbox from './list/CIListCheckbox.vue'
+import CIListRadio from './list/CIListRadio.vue'
 
-import CILoading from './CILoading/CILoading.vue'
+import CILoading from './loading/CILoading.vue'
 
-import CIGrid from './CIGrid/CIGrid.vue'
-import CIGridCell from './CIGrid/CIGridCell.vue'
+import CIGallery from './gallery/CIGallery.vue'
+import CIGalleryCell from './gallery/CIGalleryCell.vue'
 
-import CIModal from './CIModal/CIModalBootstrap.vue'
-import CIActions from './CIModal/CIActions.vue'
-import CIAlert from './CIModal/CIAlertBootstrap.vue'
-import CIConfirm from './CIModal/CIConfirmBootstrap.vue'
-
-import CITabBar from './CITabView/CITabBar.vue'
+import CITabBar from './tabView/CITabBar.vue'
 
 
 import CIScrollHelper from './utils/CIScrollHelper'
@@ -62,15 +62,13 @@ const CIomponents = {
 
   'ci-loading': CILoading,
 
-  'ci-modal': CIModal,
-  'ci-actions': CIActions,
-  'ci-alert': CIAlert,
-  'ci-confirm': CIConfirm,
+  'ci-modal': BSModal,
+  'ci-actions': BSActions,
+  'ci-alert': BSAlert,
+  'ci-confirm': BSConfirm,
 
-  'ci-loading': CILoading,
-
-  'ci-grid': CIGrid,
-  'ci-grid-cell': CIGridCell,
+  'ci-gallery': CIGallery,
+  'ci-gallery-cell': CIGalleryCell,
 
   'ci-tab-bar': CITabBar,
   'ci-table': BSTable

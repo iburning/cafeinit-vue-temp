@@ -5,8 +5,8 @@
       <span class="sub-title">区块</span>
     </ci-list-cell>
 
-    <ci-list-cell accessory="link" v-link="{path: '/grid'}">
-      <strong class="title">Grid</strong>
+    <ci-list-cell accessory="link" v-link="{path: '/gallery'}">
+      <strong class="title">Gallery</strong>
       <span class="sub-title">阵列</span>
     </ci-list-cell>
 

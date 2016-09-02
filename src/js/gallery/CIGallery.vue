@@ -1,5 +1,5 @@
 <template>
-  <ul class="ci-grid">
+  <ul class="ci-gallery">
     <slot></slot>
   </ul>
 </template>

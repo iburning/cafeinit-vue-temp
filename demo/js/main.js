@@ -9,8 +9,6 @@ import VueRouter from 'vue-router'
 import CafeinitVue from 'cafeinit-vue'
 import CafeinitStyle from 'cafeinit.css'
 
-console.log('CafeinitVue', CafeinitVue)
-
 Vue.use(VueRouter)
 Vue.use(CafeinitVue.components)
 
@@ -42,8 +40,8 @@ router.map({
     component: require('./modals.vue')
   },
 
-  '/grid': {
-    component: require('./grid.vue')
+  '/gallery': {
+    component: require('./gallery.vue')
   },
 
   '/list': {
