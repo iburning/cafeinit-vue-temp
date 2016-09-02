@@ -34,6 +34,11 @@
       <span class="sub-title">按钮</span>
     </ci-list-cell>
 
+    <ci-list-cell accessory="link" v-link="{path: '/tables'}">
+      <strong class="title">Table</strong>
+      <span class="sub-title">表格</span>
+    </ci-list-cell>
+
     <ci-list-cell accessory="link" v-link="{path: '/form'}">
       <strong class="title">Form</strong>
       <span class="sub-title">表单</span>

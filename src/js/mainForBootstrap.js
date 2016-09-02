@@ -34,6 +34,8 @@ import CIConfirm from './CIModal/CIConfirmBootstrap.vue'
 
 import CITabBar from './CITabView/CITabBar.vue'
 
+import CITable from './CITable/CITableBootstrap.vue'
+
 
 import CIScrollHelper from './utils/CIScrollHelper'
 
@@ -70,6 +72,7 @@ const CIomponents = {
   'ci-grid-cell': CIGridCell,
 
   'ci-tab-bar': CITabBar,
+  'ci-table': CITable
 }
 
 

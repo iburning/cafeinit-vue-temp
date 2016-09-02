@@ -54,6 +54,10 @@ router.map({
 
   '/tab-bar': {
     component: require('./tabBar.vue')
+  },
+
+  '/tables': {
+    component: require('./tables.vue')
   }
 })
 
