@@ -35,7 +35,7 @@
     </ci-list-cell>
 
     <ci-list-cell accessory="link" v-link="{path: '/tables'}">
-      <strong class="title">Table</strong>
+      <strong class="title">Tables</strong>
       <span class="sub-title">表格</span>
     </ci-list-cell>
 
@@ -43,25 +43,17 @@
       <strong class="title">Form</strong>
       <span class="sub-title">表单</span>
     </ci-list-cell>
+
+    <ci-list-cell accessory="link" v-link="{path: '/form-list'}">
+      <strong class="title">Form List</strong>
+      <span class="sub-title">表单列表</span>
+    </ci-list-cell>
   </ci-list>
 
   <ci-list>
     <ci-list-cell accessory="link" v-link="{path: '/tab-bar'}">
       <strong class="title">TabBar</strong>
       <span class="sub-title">标签导航</span>
-    </ci-list-cell>
-  </ci-list>
-
-
-  <ci-list>
-    <ci-list-cell accessory="link" v-link="{path: '/items'}">
-      <strong class="title">Items</strong>
-      <span class="sub-title">商品列表</span>
-    </ci-list-cell>
-
-    <ci-list-cell accessory="link" v-link="{path: '/orders'}">
-      <strong class="title">Orders</strong>
-      <span class="sub-title">订单列表</span>
     </ci-list-cell>
   </ci-list>
 </template>

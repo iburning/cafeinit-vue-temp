@@ -1,7 +1,24 @@
 <template>
-  <ci-table class="users" v-ref:my-table></ci-table>
-  <ci-table class="users" striped="striped" v-ref:my-table-a></ci-table>
-  <ci-table class="users" bordered="bordered" v-ref:my-table-b></ci-table>
+  <ci-block>
+    <ci-block-header><h4>Table Title</h4></ci-block-header>
+    <ci-block-body>
+      <ci-table class="users" v-ref:my-table></ci-table>
+    </ci-block-body>
+  </ci-block>
+
+  <ci-block>
+    <ci-block-header><h4>Table Title</h4></ci-block-header>
+    <ci-block-body>
+      <ci-table class="users" striped="striped" v-ref:my-table-a></ci-table>
+    </ci-block-body>
+  </ci-block>
+
+  <ci-block>
+    <ci-block-header><h4>Table Title</h4></ci-block-header>
+    <ci-block-body>
+      <ci-table class="users" bordered="bordered" v-ref:my-table-b></ci-table>
+    </ci-block-body>
+  </ci-block>
 </template>
 
 

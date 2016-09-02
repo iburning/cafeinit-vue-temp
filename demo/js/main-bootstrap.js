@@ -36,6 +36,10 @@ router.map({
     component: require('./form.vue')
   },
 
+  '/form-list': {
+    component: require('./formList.vue')
+  },
+
   '/modals': {
     component: require('./modals.vue')
   },
