@@ -1,6 +1,6 @@
 <template>
   <div class="{{ns}}form-group">
-    <label v-if="title"
+    <label class="{{ns}}control-label" v-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
     <div v-if="inline">
       <label class="checkbox-inline" v-for="item in items">

@@ -1,6 +1,6 @@
 <template>
   <div class="{{ns}}form-group">
-    <label v-if="title"
+    <label class="{{ns}}control-label" v-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
     <select class="{{ns}}form-control" name="{{name}}" v-model="model">
       <option value="{{item.value}}" v-for="item in items">{{item.title}}</option>
