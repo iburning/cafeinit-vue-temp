@@ -1,10 +1,15 @@
 <template>
   <div class="{{ns}}form-group">
-    <label class="{{ns}}label" v-if="title"
+    <label v-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
-    <select class="{{ns}}form-control" name="{{name}}" v-model="model">
-      <option value="{{item.value}}" v-for="item in items">{{item.title}}</option>
-    </select>
+    <div class="">
+      <label class="radio-inline" v-for="item in items">
+        <input type="radio"
+          v-bind:name="name"
+          v-bind:value="item.value"
+          v-model="model" /> {{item.title}}
+      </label>
+    </div>
   </div>
 </template>
 
@@ -14,7 +19,7 @@ export default {
   props: {
     ns: {
       type: String,
-      default: 'ci-'
+      default: ''
     },
 
     model: {

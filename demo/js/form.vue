@@ -1,6 +1,6 @@
 <template>
   <ci-list class="ci-list-form">
-    <ci-list-cell accessory="link">
+    <ci-list-cell>
       <ci-select title="商品分类" name="category" v-bind:items="[
           {title: 'Category 01', value: '1'},
           {title: 'Category 02', value: '2'},
@@ -12,6 +12,11 @@
     <ci-list-cell>
       <ci-input title="电子邮箱" type="email" name="email" placeholder="请输入邮箱"
         v-bind:model.sync="email"></ci-input>
+    </ci-list-cell>
+
+    <ci-list-cell>
+      <ci-input title="密码" type="password" name="password" placeholder="6-18位字母数字"
+        v-bind:model.sync="password"></ci-input>
     </ci-list-cell>
 
     <ci-list-cell>

@@ -1,8 +1,8 @@
 <template>
-  <div class="ci-form-group">
-    <label class="ci-label" v-if="title"
+  <div class="{{ns}}form-group">
+    <label class="{{ns}}label" vi-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
-    <input class="ci-form-control"
+    <input class="{{ns}}form-control"
       v-model="model"
       v-bind:type="type"
       v-bind:name="name"
@@ -15,6 +15,11 @@
 <script>
 export default {
   props: {
+    ns: {
+      type: String,
+      default: 'ci-'
+    },
+
     model: {
       type: String,
       twoWay: true,

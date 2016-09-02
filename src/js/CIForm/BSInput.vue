@@ -1,10 +1,13 @@
 <template>
   <div class="{{ns}}form-group">
-    <label class="{{ns}}label" v-if="title"
+    <label vi-bind:class="ns ? ns + 'label' : ''" vi-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
-    <select class="{{ns}}form-control" name="{{name}}" v-model="model">
-      <option value="{{item.value}}" v-for="item in items">{{item.title}}</option>
-    </select>
+    <input class="{{ns}}form-control"
+      v-model="model"
+      v-bind:type="type"
+      v-bind:name="name"
+      v-bind:placeholder="placeholder"
+      v-bind:disabled="disabled" />
   </div>
 </template>
 
@@ -14,7 +17,7 @@ export default {
   props: {
     ns: {
       type: String,
-      default: 'ci-'
+      default: ''
     },
 
     model: {
@@ -34,14 +37,23 @@ export default {
       default: ''
     },
 
+    type: {
+      type: String,
+      default: 'text'
+    },
+
     name: {
       type: String,
       required: true
     },
 
-    items: {
-      type: Array,
-      required: true
+    placeholder: {
+      type: String
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }

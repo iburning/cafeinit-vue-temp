@@ -1,8 +1,8 @@
 <template>
-  <div class="ci-form-group">
-    <label class="ci-label" v-if="title"
+  <div class="{{ns}}form-group">
+    <label class="{{ns}}label" v-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
-    <div class="ci-form-control">
+    <div class="{{ns}}form-control">
       <label v-for="item in items">
         <input type="radio"
           v-bind:name="name"
@@ -17,6 +17,11 @@
 <script>
 export default {
   props: {
+    ns: {
+      type: String,
+      default: 'ci-'
+    },
+
     model: {
       type: String,
       twoWay: true,

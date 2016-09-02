@@ -4,18 +4,21 @@
  * @date: 2016-08-30
  */
 
+
+import BSButton from './CIButton/BSButton.vue'
+import BSLinkButton from './CIButton/BSLinkButton.vue'
+
+import BSCheckbox from './CIForm/BSCheckbox.vue'
+import BSInput from './CIForm/BSInput.vue'
+import BSRadio from './CIForm/BSRadio.vue'
+import BSSelect from './CIForm/BSSelect.vue'
+import BSTable from './CITable/CITableBootstrap.vue'
+
+
 import CIBlock from './CIBlock/CIBlock.vue'
 import CIBlockBody from './CIBlock/CIBlockBody.vue'
 import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
 import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
-
-import CIButton from './CIButton/CIButtonBootstrap.vue'
-import CILinkButton from './CIButton/CILinkButtonBootstrap.vue'
-
-import CICheckbox from './CIForm/CICheckbox.vue'
-import CIInput from './CIForm/CIInput.vue'
-import CIRadio from './CIForm/CIRadio.vue'
-import CISelect from './CIForm/CISelect.vue'
 
 import CIList from './CIList/CIList.vue'
 import CIListCell from './CIList/CIListCell.vue'
@@ -34,8 +37,6 @@ import CIConfirm from './CIModal/CIConfirmBootstrap.vue'
 
 import CITabBar from './CITabView/CITabBar.vue'
 
-import CITable from './CITable/CITableBootstrap.vue'
-
 
 import CIScrollHelper from './utils/CIScrollHelper'
 
@@ -46,13 +47,13 @@ const CIomponents = {
   'ci-block-footer': CIBlockFooter,
   'ci-block-header': CIBlockHeader,
 
-  'ci-button': CIButton,
-  'ci-link-button': CILinkButton,
+  'ci-button': BSButton,
+  'ci-link-button': BSLinkButton,
 
-  'ci-checkbox': CICheckbox,
-  'ci-input': CIInput,
-  'ci-radio': CIRadio,
-  'ci-select': CISelect,
+  'ci-checkbox': BSCheckbox,
+  'ci-input': BSInput,
+  'ci-radio': BSRadio,
+  'ci-select': BSSelect,
 
   'ci-list': CIList,
   'ci-list-cell': CIListCell,
@@ -72,7 +73,7 @@ const CIomponents = {
   'ci-grid-cell': CIGridCell,
 
   'ci-tab-bar': CITabBar,
-  'ci-table': CITable
+  'ci-table': BSTable
 }
 
 
