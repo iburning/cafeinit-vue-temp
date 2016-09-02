@@ -1,5 +1,10 @@
 <template>
   <ci-list>
+    <ci-list-cell accessory="link" v-link="{path: '/grid'}">
+      <strong class="title">Grid</strong>
+      <span class="sub-title">网格</span>
+    </ci-list-cell>
+
     <ci-list-cell accessory="link" v-link="{path: '/block'}">
       <strong class="title">Block</strong>
       <span class="sub-title">区块</span>

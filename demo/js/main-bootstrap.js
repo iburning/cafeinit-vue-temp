@@ -48,6 +48,10 @@ router.map({
     component: require('./gallery.vue')
   },
 
+  '/grid': {
+    component: require('./grid.vue')
+  },
+
   '/list': {
     component: require('./list.vue')
   },

@@ -8,6 +8,9 @@
 import BSButton from './button/BSButton.vue'
 import BSLinkButton from './button/BSLinkButton.vue'
 
+import BSGrid from './grid/BSGrid.vue'
+import BSGridCell from './grid/BSGridCell.vue'
+
 import BSModal from './modal/BSModal.vue'
 import BSActions from './modal/BSActions.vue'
 import BSAlert from './modal/BSAlert.vue'
@@ -69,6 +72,9 @@ const CIomponents = {
 
   'ci-gallery': CIGallery,
   'ci-gallery-cell': CIGalleryCell,
+
+  'ci-grid': BSGrid,
+  'ci-grid-cell': BSGridCell,
 
   'ci-tab-bar': CITabBar,
   'ci-table': BSTable
