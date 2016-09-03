@@ -60,6 +60,11 @@
       <strong class="title">TabBar</strong>
       <span class="sub-title">标签导航</span>
     </ci-list-cell>
+
+    <ci-list-cell accessory="link" v-link="{path: '/pagination'}">
+      <strong class="title">Pagination</strong>
+      <span class="sub-title">翻页导航</span>
+    </ci-list-cell>
   </ci-list>
 </template>
 

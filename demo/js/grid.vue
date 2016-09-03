@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-grid">
+  <div class="my-grid">
     <ci-grid>
       <ci-grid-cell size="xs-6 md-6"></ci-grid-cell>
       <ci-grid-cell size="xs-6 md-6"></ci-grid-cell>

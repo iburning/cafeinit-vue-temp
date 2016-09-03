@@ -44,6 +44,10 @@ router.map({
     component: require('./modals.vue')
   },
 
+  '/pagination': {
+    component: require('./pagination.vue')
+  },
+
   '/gallery': {
     component: require('./gallery.vue')
   },

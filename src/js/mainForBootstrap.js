@@ -28,15 +28,17 @@ import CIBlockBody from './block/CIBlockBody.vue'
 import CIBlockFooter from './block/CIBlockFooter.vue'
 import CIBlockHeader from './block/CIBlockHeader.vue'
 
+import CIGallery from './gallery/CIGallery.vue'
+import CIGalleryCell from './gallery/CIGalleryCell.vue'
+
 import CIList from './list/CIList.vue'
 import CIListCell from './list/CIListCell.vue'
 import CIListCheckbox from './list/CIListCheckbox.vue'
 import CIListRadio from './list/CIListRadio.vue'
 
-import CILoading from './loading/CILoading.vue'
+import CIPagination from './pagination/CIPagination.vue'
 
-import CIGallery from './gallery/CIGallery.vue'
-import CIGalleryCell from './gallery/CIGalleryCell.vue'
+import CILoading from './loading/CILoading.vue'
 
 import CITabBar from './tabView/CITabBar.vue'
 
@@ -57,6 +59,8 @@ const CIomponents = {
   'ci-input': BSInput,
   'ci-radio': BSRadio,
   'ci-select': BSSelect,
+
+  'ci-pagination': CIPagination,
 
   'ci-list': CIList,
   'ci-list-cell': CIListCell,
