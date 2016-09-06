@@ -45,7 +45,8 @@ export default {
 
     currentPage: {
       type: Number,
-      default: 1
+      default: 1,
+      twoWay: true
     },
 
     totalPage: {
