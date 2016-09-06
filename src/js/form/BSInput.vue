@@ -1,6 +1,6 @@
 <template>
   <div class="{{ns}}form-group">
-    <label class="{{ns}}control-label" vi-bind:class="ns ? ns + 'label' : ''" vi-if="title"
+    <label class="{{ns}}control-label" v-bind:class="ns ? ns + 'label' : ''" v-if="title"
       v-bind:style="{width: titleWidth}">{{title}}</label>
     <input class="{{ns}}form-control"
       v-model="model"
