@@ -32,6 +32,10 @@ router.map({
     component: require('./buttons.vue')
   },
 
+  '/datetime-picker': {
+    component: require('./datetimePicker.vue')
+  },
+
   '/form': {
     component: require('./form.vue')
   },

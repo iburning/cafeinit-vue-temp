@@ -103,12 +103,6 @@ export default {
     }
   },
 
-  watch: {
-    'currentPage': function (val, oldVal) {
-      this.$dispatch('change', val, oldVal)
-    }
-  },
-
   methods: {
     itemOnClick: function (page) {
       this.currentPage = page

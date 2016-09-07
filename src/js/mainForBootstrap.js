@@ -17,6 +17,7 @@ import BSAlert from './modal/BSAlert.vue'
 import BSConfirm from './modal/BSConfirm.vue'
 
 import BSCheckbox from './form/BSCheckbox.vue'
+import BSDatetimePicker from './form/BSDatetimePicker.vue'
 import BSInput from './form/BSInput.vue'
 import BSRadio from './form/BSRadio.vue'
 import BSSelect from './form/BSSelect.vue'
@@ -56,6 +57,7 @@ const CIomponents = {
   'ci-link-button': BSLinkButton,
 
   'ci-checkbox': BSCheckbox,
+  'ci-datetime-picker': BSDatetimePicker,
   'ci-input': BSInput,
   'ci-radio': BSRadio,
   'ci-select': BSSelect,

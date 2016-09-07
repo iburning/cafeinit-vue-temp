@@ -49,6 +49,11 @@
       <span class="sub-title">表单</span>
     </ci-list-cell>
 
+    <ci-list-cell accessory="link" v-link="{path: '/datetime-picker'}">
+      <strong class="title">Datetime Picker</strong>
+      <span class="sub-title">时间日期选择器</span>
+    </ci-list-cell>
+
     <ci-list-cell accessory="link" v-link="{path: '/form-list'}">
       <strong class="title">Form List</strong>
       <span class="sub-title">表单列表</span>
