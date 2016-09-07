@@ -103,16 +103,22 @@ export default {
     }
   },
 
+  watch: {
+    'currentPage': function (val, oldVal) {
+      this.$dispatch('change', val, oldVal)
+    }
+  },
+
   methods: {
     itemOnClick: function (page) {
       this.currentPage = page
-      window._test = this
       let params = [];
       for (name in this.params) {
         params.push(name + '=' + this.params[name])
       }
       params.push('page=' + page)
-      console.log('itemOnClick', page, this, this.url, params.join('&'))
+      // console.log('itemOnClick', page, this, this.url, params.join('&'))
+      this.$dispatch('item-click', page, params)
     }
   }
 }
