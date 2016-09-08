@@ -28,6 +28,10 @@ router.map({
     component: require('./block.vue')
   },
 
+  '/breadcrumb': {
+    component: require('./breadcrumb.vue')
+  },
+
   '/buttons': {
     component: require('./buttons.vue')
   },

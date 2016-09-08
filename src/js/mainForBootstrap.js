@@ -1,9 +1,11 @@
 /**
  * @fileOverview main for bootstrap
  * @author: burning <www.cafeinit.com>
- * @date: 2016-08-30
+ * @date: 2016-09-08
  */
 
+
+import BSBreadcrumb from './breadcrumb/BSBreadcrumb.vue'
 
 import BSButton from './button/BSButton.vue'
 import BSLinkButton from './button/BSLinkButton.vue'
@@ -52,6 +54,8 @@ const CIomponents = {
   'ci-block-body': CIBlockBody,
   'ci-block-footer': CIBlockFooter,
   'ci-block-header': CIBlockHeader,
+
+  'ci-breadcrumb': BSBreadcrumb,
 
   'ci-button': BSButton,
   'ci-link-button': BSLinkButton,
