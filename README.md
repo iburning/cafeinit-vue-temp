@@ -18,3 +18,5 @@ CafeInit Vue
 - http://www.riaxe.com/marketplace/thin-admin/index.html
 - http://aqvatarius.com/themes/atlant/html/index.html
 - http://flatfull.com/themes/first/index.html
+
+- http://hubancreative.com/projects/templates/presenter/?theme=coco3
