@@ -1,0 +1,10 @@
+<ol class="{{ns}}breadcrumb">
+  <template v-for="(index, item) in items">
+    <li v-if="index < items.length - 1">
+      <a v-link="item.link">{{item.title}}</a>
+    </li>
+    <li v-else class="{{ns}}active">
+      <span>{{item.title}}</span>
+    </li>
+  </template>
+</ol>

@@ -1,9 +1,11 @@
 /**
  * @fileOverview main for bootstrap
  * @author: burning <www.cafeinit.com>
- * @date: 2016-08-30
+ * @date: 2016-09-08
  */
 
+
+import BSBreadcrumb from './breadcrumb/BSBreadcrumb.vue'
 
 import BSButton from './button/BSButton.vue'
 import BSLinkButton from './button/BSLinkButton.vue'
@@ -17,6 +19,7 @@ import BSAlert from './modal/BSAlert.vue'
 import BSConfirm from './modal/BSConfirm.vue'
 
 import BSCheckbox from './form/BSCheckbox.vue'
+import BSDatetimePicker from './form/BSDatetimePicker.vue'
 import BSInput from './form/BSInput.vue'
 import BSRadio from './form/BSRadio.vue'
 import BSSelect from './form/BSSelect.vue'
@@ -52,10 +55,13 @@ const CIomponents = {
   'ci-block-footer': CIBlockFooter,
   'ci-block-header': CIBlockHeader,
 
+  'ci-breadcrumb': BSBreadcrumb,
+
   'ci-button': BSButton,
   'ci-link-button': BSLinkButton,
 
   'ci-checkbox': BSCheckbox,
+  'ci-datetime-picker': BSDatetimePicker,
   'ci-input': BSInput,
   'ci-radio': BSRadio,
   'ci-select': BSSelect,

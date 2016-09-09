@@ -23,13 +23,12 @@ export default {
   computed: {
     sizeClass: function () {
       let input = this.size.split(' ')
-      console.log(input)
       let output = []
 
       for (let i = 0; i < input.length; i++) {
         output.push(this.prefix + input[i])
       }
-      console.log(output)
+
       return output.join(' ')
     }
   }

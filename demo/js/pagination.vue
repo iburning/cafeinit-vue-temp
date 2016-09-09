@@ -1,7 +1,8 @@
 <template>
+  <strong>{{page}}</strong>
   <ci-pagination
-    v-bind:current-page="2"
-    v-bind:total-page="15"
+    v-bind:current-page.sync="page"
+    v-bind:total-page="totalPage"
     v-bind:show-count="10"
     v-bind:is-show-next="true"
     url="path/page",
@@ -15,6 +16,11 @@
 
 <script>
 export default {
-  // ...
+  data() {
+    return {
+      page: 1,
+      totalPage: 21
+    }
+  }
 }
 </script>

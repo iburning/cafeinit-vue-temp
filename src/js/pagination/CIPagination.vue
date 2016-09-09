@@ -45,7 +45,8 @@ export default {
 
     currentPage: {
       type: Number,
-      default: 1
+      default: 1,
+      twoWay: true
     },
 
     totalPage: {
@@ -105,13 +106,13 @@ export default {
   methods: {
     itemOnClick: function (page) {
       this.currentPage = page
-      window._test = this
       let params = [];
       for (name in this.params) {
         params.push(name + '=' + this.params[name])
       }
       params.push('page=' + page)
-      console.log('itemOnClick', page, this, this.url, params.join('&'))
+      // console.log('itemOnClick', page, this, this.url, params.join('&'))
+      this.$dispatch('item-click', page, params)
     }
   }
 }
