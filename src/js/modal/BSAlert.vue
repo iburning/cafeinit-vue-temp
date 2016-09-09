@@ -20,6 +20,11 @@ export default {
       twoWay: true
     },
 
+    isCloseViaDimmer: {
+      type: Boolean,
+      default: false
+    },
+
     title: {
       type: String,
       default: ''
