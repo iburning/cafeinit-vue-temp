@@ -1,11 +1,15 @@
 <template>
-  <ci-modal v-bind:is-show.sync="isShow" v-bind:is-close-via-dimmer="isCloseViaDimmer">
+  <ci-modal
+    v-bind:is-show.sync="isShow"
+    v-bind:is-close-via-dimmer="isCloseViaDimmer"
+    v-bind:is-fead="isFead"
+    v-bind:size="size">
     <div class="modal-header" slot="header" v-if="title">
       <h4 class="modal-title">{{title}}</h4>
     </div>
-    <div class="modal-body" slot="body"><slot>default alert</slot></div>
+    <div class="modal-body" slot="body"><slot>default alert content</slot></div>
     <div class="modal-footer" slot="footer">
-      <span class="btn btn-default" v-on:click="ok">{{okText}}</span>
+      <span class="btn btn-default" v-on:click="hide">{{okText}}</span>
     </div>
   </ci-modal>
 </template>
@@ -20,9 +24,19 @@ export default {
       twoWay: true
     },
 
-    isCloseViaDimmer: {
+    isCloseViaDimmer: {   // 是否通过点击遮罩层关闭模态框，默认为true
       type: Boolean,
-      default: false
+      default: true
+    },
+
+    isFead: {       // 是否使用淡入淡出效果
+      type: Boolean,
+      default: true
+    },
+
+    size: {
+      type: String,
+      default: ''       // sm / lg
     },
 
     title: {
@@ -40,6 +54,13 @@ export default {
     // ...
   },
 
+  watch: {
+    isShow(val) {
+      if (!val) {
+        this.$dispatch('hide')
+      }
+    }
+  },
 
   methods: {
     show() {
@@ -48,11 +69,6 @@ export default {
 
     hide() {
       this.isShow = false
-    },
-
-    ok() {
-      this.hide()
-      this.$dispatch('ok')
     }
   }
 }

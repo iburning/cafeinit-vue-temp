@@ -7,12 +7,13 @@
   </div>
 
 
-  <ci-alert v-bind:is-show.sync="isShowAlert" v-on:ok="alertOnOK">Alert Content</ci-alert>
+  <ci-alert v-bind:is-show.sync="isShowAlert" v-on:hide="alertOnHide">Alert Content</ci-alert>
 
   <ci-alert
+    size="lg"
     v-bind:is-show.sync="isShowAlert2"
     v-bind:is-close-via-dimmer="true"
-    v-on:ok="alertOnOK">
+    v-on:hide="alertOnHide">
     Alert2 Content
   </ci-alert>
 
@@ -52,8 +53,8 @@ export default {
   },
 
   methods: {
-    alertOnOK() {
-      console.log('alertOK')
+    alertOnHide() {
+      console.log('alertOnHide')
     },
 
     confirmOnOK() {

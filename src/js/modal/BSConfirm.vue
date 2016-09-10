@@ -1,5 +1,9 @@
 <template>
-  <ci-modal v-bind:is-show.sync="isShow" v-bind:is-close-via-dimmer="false">
+  <ci-modal
+    v-bind:is-show.sync="isShow"
+    v-bind:is-close-via-dimmer="false"
+    v-bind:is-fead="isFead"
+    v-bind:size="size">
     <div class="modal-header" slot="header" v-if="title">
       <h4 class="modal-title">{{title}}</h4>
     </div>
@@ -19,6 +23,16 @@ export default {
       type: Boolean,
       default: false,
       twoWay: true
+    },
+
+    isFead: {       // 是否使用淡入淡出效果
+      type: Boolean,
+      default: true
+    },
+
+    size: {
+      type: String,
+      default: ''       // sm / lg
     },
 
     title: {

@@ -1,9 +1,10 @@
 <template>
   <div v-show="isShow">
-    <div class="modal fade" tabindex="-1" role="dialog"
-      v-bind:class="{'in': isShow, 'modal-lg': lg}"
+    <div class="modal" tabindex="-1" role="dialog"
+      v-bind:class="{'in': isShow, 'fade': isFead}"
       v-on:click="closeViaDimmer">
-      <div class="modal-dialog" role="document"
+      <div class="modal-dialog"
+        v-bind:class="{'modal-lg': size === 'lg', 'modal-sm': size === 'sm'}"
         v-bind:style="{'margin-top': marginTop + 'px'}">
         <div class="modal-content">
           <slot name="header"></slot>
@@ -13,8 +14,8 @@
       </div>
     </div>
 
-    <div class="modal-backdrop fade"
-      v-bind:class="{'in': isShow}"
+    <div class="modal-backdrop"
+      v-bind:class="{'in': isShow, 'fade': isFead}"
       transition="modal-fade"></div>
   </div>
 </template>
@@ -34,9 +35,14 @@ export default {
       default: true
     },
 
-    lg: {
+    isFead: {       // 是否使用淡入淡出效果
       type: Boolean,
-      default: false
+      default: true
+    },
+
+    size: {
+      type: String,
+      default: ''       // sm / lg
     },
 
     marginTop: {
