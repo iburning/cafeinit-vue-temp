@@ -12,9 +12,9 @@
         <ci-list>
           <ci-list-cell v-for="(index, item) in items">
             <ci-link-button block="block"
-              v-bind:class="[item.className, {'ci-selected': selectedIndex == index}]"
+              v-bind:class="[item.className, {'ci-selected': selectedIndex === index}]"
               v-on:click="clickItem(index, item)"
-              v-link="{path: item.path}">{{item.text}}</ci-link-button>
+              v-link="item.link">{{item.text}}</ci-link-button>
           </ci-list-cell>
         </ci-list>
       </slot>

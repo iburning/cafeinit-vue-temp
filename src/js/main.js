@@ -19,8 +19,8 @@ import CISelect from './form/CISelect.vue'
 
 import CIList from './list/CIList.vue'
 import CIListCell from './list/CIListCell.vue'
-import CIListCheckbox from './list/CIListCheckbox.vue'
-import CIListRadio from './list/CIListRadio.vue'
+import CIListCheckbox from './list/BSListCheckbox.vue'
+import CIListRadio from './list/BSListRadio.vue'
 
 import CILoading from './loading/CILoading.vue'
 

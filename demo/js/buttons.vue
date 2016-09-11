@@ -2,8 +2,8 @@
   <ci-block>
     <ci-block-header v-link="{path: '/home'}">Style</ci-block-header>
     <ci-block-body>
-      <ci-link-button class="more" v-link="{path: '/home'}">more</ci-link-button>
-      <ci-link-button class="my-class" href="/home">Href Button</ci-link-button>
+      <ci-link-button class="more" v-bind:link="{path: '/home'}">more</ci-link-button>
+      <ci-link-button class="my-class" v-bind:link="{path: '/home'}">Href Button</ci-link-button>
       <ci-link-button v-on:click="buttonClick">Event Button</ci-link-button>
 
       <ci-button type="submit">Submit Button</ci-button>

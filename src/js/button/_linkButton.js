@@ -8,7 +8,7 @@ export default {
   props: {
     style: {
       type: String,
-      default: ''
+      default: 'default'
     },
 
     size: {

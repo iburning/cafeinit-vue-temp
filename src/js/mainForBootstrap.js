@@ -4,46 +4,49 @@
  * @date: 2016-09-08
  */
 
-
-import BSBreadcrumb from './breadcrumb/BSBreadcrumb.vue'
-
-import BSButton from './button/BSButton.vue'
-import BSLinkButton from './button/BSLinkButton.vue'
-
-import BSGrid from './grid/BSGrid.vue'
-import BSGridCell from './grid/BSGridCell.vue'
-
-import BSModal from './modal/BSModal.vue'
-import BSActions from './modal/BSActions.vue'
-import BSAlert from './modal/BSAlert.vue'
-import BSConfirm from './modal/BSConfirm.vue'
-
-import BSCheckbox from './form/BSCheckbox.vue'
-import BSDatetimePicker from './form/BSDatetimePicker.vue'
-import BSInput from './form/BSInput.vue'
-import BSRadio from './form/BSRadio.vue'
-import BSSelect from './form/BSSelect.vue'
-import BSTable from './table/BSTable.vue'
-
-
 import CIBlock from './block/CIBlock.vue'
 import CIBlockBody from './block/CIBlockBody.vue'
 import CIBlockFooter from './block/CIBlockFooter.vue'
 import CIBlockHeader from './block/CIBlockHeader.vue'
 
+import CIBreadcrumb from './breadcrumb/BSBreadcrumb.vue'
+
 import CIGallery from './gallery/CIGallery.vue'
 import CIGalleryCell from './gallery/CIGalleryCell.vue'
 
+import CIGrid from './grid/BSGrid.vue'
+import CIGridCell from './grid/BSGridCell.vue'
+
 import CIList from './list/CIList.vue'
 import CIListCell from './list/CIListCell.vue'
-import CIListCheckbox from './list/CIListCheckbox.vue'
-import CIListRadio from './list/CIListRadio.vue'
-
-import CIPagination from './pagination/CIPagination.vue'
+import CIListCheckbox from './list/BSListCheckbox.vue'
+import CIListRadio from './list/BSListRadio.vue'
 
 import CILoading from './loading/CILoading.vue'
 
+import CIPagination from './pagination/CIPagination.vue'
+
 import CITabBar from './tabView/CITabBar.vue'
+
+import CITable from './table/BSTable.vue'
+
+
+/* for form */
+import CICheckbox from './form/BSCheckbox.vue'
+import CIDatetimePicker from './form/BSDatetimePicker.vue'
+import CIInput from './form/BSInput.vue'
+import CIRadio from './form/BSRadio.vue'
+import CISelect from './form/BSSelect.vue'
+
+import CIButton from './button/BSButton.vue'
+import CILinkButton from './button/BSLinkButton.vue'
+
+
+/* for modal */
+import CIModal from './modal/BSModal.vue'
+import CIActions from './modal/BSActions.vue'
+import CIAlert from './modal/BSAlert.vue'
+import CIConfirm from './modal/BSConfirm.vue'
 
 
 import CIScrollHelper from './utils/CIScrollHelper'
@@ -55,18 +58,13 @@ const CIomponents = {
   'ci-block-footer': CIBlockFooter,
   'ci-block-header': CIBlockHeader,
 
-  'ci-breadcrumb': BSBreadcrumb,
+  'ci-breadcrumb': CIBreadcrumb,
 
-  'ci-button': BSButton,
-  'ci-link-button': BSLinkButton,
+  'ci-gallery': CIGallery,
+  'ci-gallery-cell': CIGalleryCell,
 
-  'ci-checkbox': BSCheckbox,
-  'ci-datetime-picker': BSDatetimePicker,
-  'ci-input': BSInput,
-  'ci-radio': BSRadio,
-  'ci-select': BSSelect,
-
-  'ci-pagination': CIPagination,
+  'ci-grid': CIGrid,
+  'ci-grid-cell': CIGridCell,
 
   'ci-list': CIList,
   'ci-list-cell': CIListCell,
@@ -75,19 +73,26 @@ const CIomponents = {
 
   'ci-loading': CILoading,
 
-  'ci-modal': BSModal,
-  'ci-actions': BSActions,
-  'ci-alert': BSAlert,
-  'ci-confirm': BSConfirm,
-
-  'ci-gallery': CIGallery,
-  'ci-gallery-cell': CIGalleryCell,
-
-  'ci-grid': BSGrid,
-  'ci-grid-cell': BSGridCell,
+  'ci-pagination': CIPagination,
 
   'ci-tab-bar': CITabBar,
-  'ci-table': BSTable
+  'ci-table': CITable,
+
+  /* for form */
+  'ci-button': CIButton,
+  'ci-link-button': CILinkButton,
+
+  'ci-checkbox': CICheckbox,
+  'ci-datetime-picker': CIDatetimePicker,
+  'ci-input': CIInput,
+  'ci-radio': CIRadio,
+  'ci-select': CISelect,
+
+  /* form modal */
+  'ci-modal': CIModal,
+  'ci-actions': CIActions,
+  'ci-alert': CIAlert,
+  'ci-confirm': CIConfirm
 }
 
 

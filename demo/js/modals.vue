@@ -7,13 +7,13 @@
   </div>
 
 
-  <ci-alert v-bind:is-show.sync="isShowAlert" v-on:hide="alertOnHide">Alert Content</ci-alert>
+  <ci-alert v-bind:is-show.sync="isShowAlert" v-on:close="alertOnClose">Alert Content</ci-alert>
 
   <ci-alert
     size="lg"
     v-bind:is-show.sync="isShowAlert2"
-    v-bind:is-close-via-dimmer="true"
-    v-on:hide="alertOnHide">
+    v-bind:is-close-via-dimmer="false"
+    v-on:close="alertOnClose">
     Alert2 Content
   </ci-alert>
 
@@ -28,7 +28,7 @@
       { className: 'btn-friends', text: 'Friends' }
     ]"
     cancel-text="Cancel"
-    v-on:item-click="actionOnItemClick"></ci-actions>
+    v-on:click-item="actionsOnClickItem"></ci-actions>
 </template>
 
 
@@ -53,8 +53,8 @@ export default {
   },
 
   methods: {
-    alertOnHide() {
-      console.log('alertOnHide')
+    alertOnClose() {
+      console.log('alertOnClose')
     },
 
     confirmOnOK() {
@@ -65,8 +65,8 @@ export default {
       console.log('confirmCancel')
     },
 
-    actionOnItemClick(index, item) {
-      console.log('actionOnItemClick', index, item)
+    actionsOnClickItem(index, item) {
+      console.log('actionsOnClickItem', index, item)
     }
   }
 }

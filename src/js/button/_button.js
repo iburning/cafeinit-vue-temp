@@ -13,7 +13,7 @@ export default {
 
     style: {
       type: String,
-      default: ''
+      default: 'default'
     },
 
     size: {

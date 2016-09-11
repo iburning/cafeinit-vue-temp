@@ -5,7 +5,7 @@ import config from './_listCheckbox'
 
 config.props.ns = {
   type: String,
-  default: 'ci-'
+  default: ''
 }
 
 export default config
