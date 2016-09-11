@@ -35,7 +35,7 @@ export default {
   methods: {
     clickItem(index, item) {
       this.selectedIndex = index
-      this.$dispatch('item-click', index, item)
+      this.$dispatch('click-item', index, item)
     }
   }
 }

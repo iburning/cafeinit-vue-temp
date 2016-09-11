@@ -1,29 +1,29 @@
 <template>
-  <div v-show="isShow">
-    <div class="am-modal-actions am-modal-active">
-      <div class="am-modal-actions-group">
-        <ul class="am-list">
-          <li v-for="(index, item) in items"
-            v-bind:class="[item.className, {'ci-selected': selectedIndex == index}]"
-            v-on:click="clickItem(index, item)">
-            <a v-if="item.path" v-link="{path: item.path}">{{item.text}}</a>
-            <a v-else href="javascritp:;">{{item.text}}</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="am-modal-actions-group">
-        <button class="am-btn am-btn-secondary am-btn-block"
-          v-on:click="close">{{cancelText}}</button>
-      </div>
+  <ci-modal
+    v-bind:is-show.sync="isShow"
+    v-bind:is-close-via-dimmer="isCloseViaDimmer"
+    v-bind:is-fead="isFead"
+    v-bind:size="size">
+    <div class="modal-header" slot="header" v-if="title">
+      <h4 class="modal-title">{{title}}</h4>
     </div>
-
-    <div class="am-dimmer"
-      v-bind:class="{'am-active': isShow}"
-      v-on:click="closeViaDimmer"></div>
-  </div>
+    <div class="modal-body" slot="body">
+      <slot>
+        <ci-list>
+          <ci-list-cell v-for="(index, item) in items">
+            <ci-link-button block="block"
+              v-bind:class="[item.className, {'ci-selected': selectedIndex == index}]"
+              v-on:click="clickItem(index, item)"
+              v-link="{path: item.path}">{{item.text}}</ci-link-button>
+          </ci-list-cell>
+        </ci-list>
+      </slot>
+    </div>
+    <div class="modal-footer" slot="footer">
+      <ci-link-button v-on:click="close">{{cancelText}}</ci-link-button>
+    </div>
+  </ci-modal>
 </template>
-
 
 <script>
 export default {
@@ -37,6 +37,16 @@ export default {
     isCloseViaDimmer: {     // 是否通过点击遮罩层关闭模态框，默认为true
       type: Boolean,
       default: true
+    },
+
+    isFead: {       // 是否使用淡入淡出效果
+      type: Boolean,
+      default: true
+    },
+
+    size: {
+      type: String,
+      default: 'sm'       // sm / lg
     },
 
     cancelText: {
@@ -115,8 +125,26 @@ export default {
     clickItem(index, item) {
       this.selectedIndex = index
       this.isShow = false
-      this.$dispatch('item-click', index, item)
+      this.$dispatch('click-item', index, item)
     }
   }
 }
 </script>
+
+
+<style scoped>
+.ci-list {
+  margin-bottom: 0;
+  border: none;
+}
+
+.ci-list-cell:before {
+  border: none;
+}
+
+.ci-list-cell {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+</style>

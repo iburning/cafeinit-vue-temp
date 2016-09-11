@@ -9,8 +9,8 @@
     </div>
     <div class="modal-body" slot="body"><slot>Are you sure ?</slot></div>
     <div class="modal-footer" slot="footer">
-      <span class="btn btn-default" v-on:click="cancel">{{concelText}}</span>
-      <span class="btn btn-primary" v-on:click="ok">{{okText}}</span>
+      <ci-link-button v-on:click="hide">{{concelText}}</ci-link-button>
+      <ci-link-button v-on:click="hide">{{okText}}</ci-link-button>
     </div>
   </ci-modal>
 </template>

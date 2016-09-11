@@ -9,7 +9,7 @@
     </div>
     <div class="modal-body" slot="body"><slot>default alert content</slot></div>
     <div class="modal-footer" slot="footer">
-      <span class="btn btn-default" v-on:click="hide">{{okText}}</span>
+      <ci-link-button v-on:click="close">{{okText}}</ci-link-button>
     </div>
   </ci-modal>
 </template>
@@ -57,7 +57,7 @@ export default {
   watch: {
     isShow(val) {
       if (!val) {
-        this.$dispatch('hide')
+        this.$dispatch('close')
       }
     }
   },
@@ -67,7 +67,7 @@ export default {
       this.isShow = true
     },
 
-    hide() {
+    close() {
       this.isShow = false
     }
   }
