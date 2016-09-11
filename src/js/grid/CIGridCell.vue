@@ -5,7 +5,7 @@ import config from './_gridCell'
 
 config.props.prefix = {
   type: String,
-  default: 'col-'
+  default: 'ci-col-'
 }
 
 export default config

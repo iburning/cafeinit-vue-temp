@@ -1,16 +1,23 @@
 <template>
-  <strong>{{page}}</strong>
-  <ci-pagination
-    v-bind:current-page.sync="page"
-    v-bind:total-page="totalPage"
-    v-bind:show-count="10"
-    v-bind:is-show-next="true"
-    url="path/page",
-    v-bind:params="{
-      a: 'A',
-      b: 'B'
-    }">
-  </ci-pagination>
+  <ci-grid>
+    <ci-grid-cell size="md-12">
+      <p>{{page}} / {{totalPage}}</p>
+
+      <ci-pagination
+        v-bind:current-page.sync="page"
+        v-bind:total-page="totalPage"
+        v-bind:show-count="5"
+        v-bind:is-show-last="true">
+      </ci-pagination>
+
+      <ci-pagination
+        v-bind:current-page.sync="page"
+        v-bind:total-page="totalPage"
+        v-bind:show-count="5"
+        v-bind:is-show-next="true">
+      </ci-pagination>
+    </ci-grid-cell>
+  </ci-grid>
 </template>
 
 

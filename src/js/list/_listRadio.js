@@ -1,5 +1,5 @@
 /**
- * @fileOverview checkbox list
+ * @fileOverview radio list
  * @author: burning <www.cafeinit.com>
  * @date: 2016-09-11
  */

@@ -24,7 +24,7 @@ import CIListRadio from './list/BSListRadio.vue'
 
 import CILoading from './loading/CILoading.vue'
 
-import CIPagination from './pagination/CIPagination.vue'
+import CIPagination from './pagination/BSPagination.vue'
 
 import CITabBar from './tabView/CITabBar.vue'
 
