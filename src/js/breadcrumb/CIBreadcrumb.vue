@@ -1,3 +1,3 @@
-<template src="./template.html"></template>
+<template src="./_breadcrumb.html"></template>
 
-<script src="./config.js"></script>
+<script src="./_breadcrumb.js"></script>

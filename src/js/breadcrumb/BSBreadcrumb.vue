@@ -1,8 +1,8 @@
-<template src="./template.html"></template>
+<template src="./_breadcrumb.html"></template>
 
 
 <script>
-import config from './config'
+import config from './_breadcrumb'
 
 config.props.ns = {
   type: String,
