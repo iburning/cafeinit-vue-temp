@@ -7,14 +7,17 @@
 
 @import "./varialbes";
 @import "./mixins";
-
-@import "normalize";
+@import "./vendor-prefixes";
+@import "./normalize";
 
 @import "./ci-block";
+@import "./ci-button";
 @import "./ci-form";
 @import "./ci-gallery";
 @import "./ci-list";
 @import "./ci-loading";
+@import "./ci-modal";
+@import "./ci-pagination";
 @import "./ci-tab-bar";
 
 
@@ -26,6 +29,16 @@
 body {
   background-color: #efefef;
 }
+
+
+a {
+  color: @color-primary;
+
+  &:hover {
+    color: darken(@color-primary, 15%);
+  }
+}
+
 
 .app-title {
   padding: 10px;
