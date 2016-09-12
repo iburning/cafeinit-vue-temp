@@ -1,12 +1,12 @@
-<template>
-  <div class="row">
-    <slot></slot>
-  </div>
-</template>
-
+<template src="./_grid.html"></template>
 
 <script>
-export default {
-  // ...
+import config from './_grid'
+
+config.props.ns = {
+  type: String,
+  default: 'ci-'
 }
+
+export default config
 </script>
