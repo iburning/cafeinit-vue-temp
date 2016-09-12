@@ -1,52 +1,55 @@
 /**
- * @fileOverview main for bootstrap
+ * @fileOverview main for amaze
  * @author: burning <www.cafeinit.com>
- * @date: 2016-09-08
+ * @date: 2016-09-12
  */
+
+window.NS = 'am-'
+console.log('amaze', NS)
 
 import CIBlock from './block/CIBlock.vue'
 import CIBlockBody from './block/CIBlockBody.vue'
 import CIBlockFooter from './block/CIBlockFooter.vue'
 import CIBlockHeader from './block/CIBlockHeader.vue'
 
-import CIBreadcrumb from './breadcrumb/BSBreadcrumb.vue'
+import CIBreadcrumb from './breadcrumb/CIBreadcrumb.vue'
 
 import CIGallery from './gallery/CIGallery.vue'
 import CIGalleryCell from './gallery/CIGalleryCell.vue'
 
-import CIGrid from './grid/BSGrid.vue'
-import CIGridCell from './grid/BSGridCell.vue'
+import CIGrid from './grid/CIGrid.vue'
+import CIGridCell from './grid/CIGridCell.vue'
 
 import CIList from './list/CIList.vue'
 import CIListCell from './list/CIListCell.vue'
-import CIListCheckbox from './list/BSListCheckbox.vue'
-import CIListRadio from './list/BSListRadio.vue'
+import CIListCheckbox from './list/CIListCheckbox.vue'
+import CIListRadio from './list/CIListRadio.vue'
 
 import CILoading from './loading/CILoading.vue'
 
-import CIPagination from './pagination/BSPagination.vue'
+import CIPagination from './pagination/CIPagination.vue'
 
 import CITabBar from './tabView/CITabBar.vue'
 
-import CITable from './table/BSTable.vue'
+import CITable from './table/CITable.vue'
 
 
 /* for form */
-import CICheckbox from './form/BSCheckbox.vue'
-// import CIDatetimePicker from './form/BSDatetimePicker.vue'
-import CIInput from './form/BSInput.vue'
-import CIRadio from './form/BSRadio.vue'
-import CISelect from './form/BSSelect.vue'
+import CICheckbox from './form/CICheckbox.vue'
+// import CIDatetimePicker from './form/CIDatetimePicker.vue'
+import CIInput from './form/CIInput.vue'
+import CIRadio from './form/CIRadio.vue'
+import CISelect from './form/CISelect.vue'
 
-import CIButton from './button/BSButton.vue'
-import CILinkButton from './button/BSLinkButton.vue'
+import CIButton from './button/CIButton.vue'
+import CILinkButton from './button/CILinkButton.vue'
 
 
 /* for modal */
-import CIModal from './modal/BSModal.vue'
-import CIActions from './modal/BSActions.vue'
-import CIAlert from './modal/BSAlert.vue'
-import CIConfirm from './modal/BSConfirm.vue'
+import CIModal from './modal/CIModal.vue'
+import CIActions from './modal/CIActions.vue'
+import CIAlert from './modal/CIAlert.vue'
+import CIConfirm from './modal/CIConfirm.vue'
 
 
 import CIScrollHelper from './utils/CIScrollHelper'
@@ -97,12 +100,12 @@ const CIomponents = {
 
 // export default {
 module.exports = {
-  name: 'CafeinitVue for Bootstrap',
+  name: 'CafeinitVue for Amaze',
   ver: '1.0.0',
 
   components: (Vue) => {
     for (let name in CIomponents) {
-      Vue.component(name, CIomponents[name])
+       Vue.component(name, CIomponents[name])
     }
   },
 

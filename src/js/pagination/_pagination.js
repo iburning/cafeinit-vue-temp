@@ -6,6 +6,11 @@
 
 export default {
   props: {
+    ns: {
+      type: String,
+      default: ''
+    },
+
     currentPage: {
       type: Number,
       default: 1,

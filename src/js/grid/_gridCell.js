@@ -9,7 +9,7 @@ export default {
   props: {
     prefix: {
       type: String,
-      default: 'ci-col-'
+      default: 'col-'
     },
 
     size: {

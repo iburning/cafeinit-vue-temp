@@ -1,3 +1,12 @@
 <template src="./_select.html"></template>
 
-<script src="./_select"></script>
+<script>
+import config from './_select'
+
+config.props.ns = {
+  type: String,
+  default: 'ci-'
+}
+
+export default config
+</script>

@@ -1,3 +1,12 @@
 <template src="./_radio.html"></template>
 
-<script src='./_radio'></script>
+<script>
+import config from './_radio'
+
+config.props.ns = {
+  type: String,
+  default: 'ci-'
+}
+
+export default config
+</script>

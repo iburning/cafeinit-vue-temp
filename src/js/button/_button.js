@@ -6,6 +6,11 @@
 
 export default {
   props: {
+    ns: {
+      type: String,
+      default: ''
+    },
+
     type: {
       type: String,
       default: 'button'

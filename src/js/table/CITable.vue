@@ -1,39 +1,12 @@
-<template>
-  <table class="{{ns}}table">
-    <thead>
-      <tr>
-        <th v-for="item in headers">{{item.name}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="rows in datas">
-        <td v-for="value in rows">{{value}}</td>
-      </tr>
-    </tbody>
-  </table>
-</template>
+<template src="./_table.html"></template>
 
 <script>
-export default {
-  props: {
-    ns: {
-      type: String,
-      default: 'ci-'
-    },
+import config from './_table'
 
-    headers: {
-      type: Array,
-      default() {
-        return [];
-      }
-    },
-
-    datas: {
-      type: Array,
-      default() {
-        return [];
-      }
-    }
-  }
+config.props.ns = {
+  type: String,
+  default: 'ci-'
 }
+
+export default config
 </script>

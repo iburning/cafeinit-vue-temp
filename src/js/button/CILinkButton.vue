@@ -1,3 +1,12 @@
 <template src="./_linkButton.html"></template>
 
-<script src="./_linkButton"></script>
+<script>
+import config from './_linkButton'
+
+config.props.ns = {
+  type: String,
+  default: 'ci-'
+}
+
+export default config
+</script>

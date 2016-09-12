@@ -4,7 +4,7 @@
  * @date: 2016-08-25
  */
 
-import Vue from 'vue';
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import CafeinitVue from 'cafeinit-vue'
 import CafeinitStyle from 'cafeinit.css'

@@ -1,7 +1,7 @@
 /**
  * @fileOverview webpack config
  * @author: burning <www.cafeinit.com>
- * @date: 2016-08-26
+ * @date: 2016-09-11
  */
 
 var webpack = require('webpack');
@@ -9,6 +9,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: {
     'cafeinit-vue': './src/js/main.js',
+    'cafeinit-vue-amaze': './src/js/mainForAmaze.js',
     'cafeinit-vue-bootstrap': './src/js/mainForBootstrap.js'
   },
 

@@ -2,7 +2,7 @@ export default {
   props: {
     ns: {
       type: String,
-      default: 'ci-'
+      default: ''
     },
 
     items: {
