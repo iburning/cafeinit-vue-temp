@@ -10,7 +10,7 @@
     </a>
   </li>
   <li v-for="page in pages"
-    v-bind:class="{'active': page === currentPage}">
+    v-bind:class="[(page === currentPage) ? (ns + 'active') : '']">
     <a href="javascript:;" v-on:click="itemOnClick(page)">{{page}}</a>
   </li>
   <li v-if="isShowNext">

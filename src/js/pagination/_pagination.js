@@ -46,7 +46,7 @@ export default {
       start = (start <= 0) ? 1 : start
       var end = start + this.showCount - 1
       end = (end > this.totalPage) ? this.totalPage : end
-      start = end - this.showCount;
+      start = end - this.showCount + 1;
       start = (start <= 0) ? 1 : start
 
       for (var i = start; i <= end; i++) {
