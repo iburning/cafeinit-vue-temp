@@ -1,24 +1,21 @@
 /**
- * @fileOverview main for amaze
+ * @fileOverview main for amazeui
  * @author: burning <www.cafeinit.com>
  * @date: 2016-09-12
  */
-
-window.NS = 'am-'
-console.log('amaze', NS)
 
 import CIBlock from './block/CIBlock.vue'
 import CIBlockBody from './block/CIBlockBody.vue'
 import CIBlockFooter from './block/CIBlockFooter.vue'
 import CIBlockHeader from './block/CIBlockHeader.vue'
 
-import CIBreadcrumb from './breadcrumb/CIBreadcrumb.vue'
+import CIBreadcrumb from './breadcrumb/AMBreadcrumb.vue'
 
 import CIGallery from './gallery/CIGallery.vue'
 import CIGalleryCell from './gallery/CIGalleryCell.vue'
 
-import CIGrid from './grid/CIGrid.vue'
-import CIGridCell from './grid/CIGridCell.vue'
+import CIGrid from './grid/AMGrid.vue'
+import CIGridCell from './grid/AMGridCell.vue'
 
 import CIList from './list/CIList.vue'
 import CIListCell from './list/CIListCell.vue'
@@ -27,22 +24,22 @@ import CIListRadio from './list/CIListRadio.vue'
 
 import CILoading from './loading/CILoading.vue'
 
-import CIPagination from './pagination/CIPagination.vue'
+import CIPagination from './pagination/AMPagination.vue'
 
 import CITabBar from './tabView/CITabBar.vue'
 
-import CITable from './table/CITable.vue'
+import CITable from './table/AMTable.vue'
 
 
 /* for form */
-import CICheckbox from './form/CICheckbox.vue'
+import CICheckbox from './form/AMCheckbox.vue'
 // import CIDatetimePicker from './form/CIDatetimePicker.vue'
-import CIInput from './form/CIInput.vue'
-import CIRadio from './form/CIRadio.vue'
-import CISelect from './form/CISelect.vue'
+import CIInput from './form/AMInput.vue'
+import CIRadio from './form/AMRadio.vue'
+import CISelect from './form/AMSelect.vue'
 
-import CIButton from './button/CIButton.vue'
-import CILinkButton from './button/CILinkButton.vue'
+import CIButton from './button/AMButton.vue'
+import CILinkButton from './button/AMLinkButton.vue'
 
 
 /* for modal */
@@ -100,7 +97,7 @@ const CIomponents = {
 
 // export default {
 module.exports = {
-  name: 'CafeinitVue for Amaze',
+  name: 'CafeinitVue for AmazeUI',
   ver: '1.0.0',
 
   components: (Vue) => {

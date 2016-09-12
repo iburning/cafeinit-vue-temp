@@ -36,7 +36,9 @@ export default {
 
 
 <style>
-.my-grid [class^=col-] {
+.my-grid [class^=col-],
+.my-grid [class^=am-u-],
+.my-grid [class^=ci-col-] {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #fff;

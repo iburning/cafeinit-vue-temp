@@ -5,7 +5,7 @@ import config from './_grid'
 
 config.props.rowClass = {
   type: String,
-  default: 'ci-row'
+  default: 'am-g'
 }
 
 export default config

@@ -7,9 +7,9 @@
 
 export default {
   props: {
-    ns: {
+    rowClass: {
       type: String,
-      default: ''
+      default: 'row'
     }
   }
 }

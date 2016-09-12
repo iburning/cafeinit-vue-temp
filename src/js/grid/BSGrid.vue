@@ -3,9 +3,9 @@
 <script>
 import config from './_grid'
 
-config.props.ns = {
+config.props.rowClass = {
   type: String,
-  default: ''
+  default: 'row'
 }
 
 export default config

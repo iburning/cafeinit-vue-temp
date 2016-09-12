@@ -9,6 +9,7 @@ var path = require('path')
 module.exports = {
   entry: {
     'main': path.resolve(__dirname, './js/main.js'),
+    'main-amazeui': path.resolve(__dirname, './js/main-amazeui.js'),
     'main-bootstrap': path.resolve(__dirname, './js/main-bootstrap.js')
   },
 
@@ -65,6 +66,7 @@ module.exports = {
   resolve: {
     alias: {
       'cafeinit-vue': path.resolve(__dirname, '../dist/js/cafeinit-vue.amd.js'),
+      'cafeinit-vue-amazeui': path.resolve(__dirname, '../dist/js/cafeinit-vue-amazeui.amd.js'),
       'cafeinit-vue-bootstrap': path.resolve(__dirname, '../dist/js/cafeinit-vue-bootstrap.amd.js'),
       'cafeinit.css': path.resolve(__dirname, '../dist/css/cafeinit.css')
     }
