@@ -71,6 +71,11 @@
       <span class="sub-title">标签导航</span>
     </ci-list-cell>
 
+    <ci-list-cell accessory="link" v-link="{path: '/tree-nav'}">
+      <strong class="title">TreeNav</strong>
+      <span class="sub-title">树形导航</span>
+    </ci-list-cell>
+
     <ci-list-cell accessory="link" v-link="{path: '/pagination'}">
       <strong class="title">Pagination</strong>
       <span class="sub-title">翻页导航</span>

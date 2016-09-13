@@ -4,9 +4,6 @@
  * @date: 2016-08-26
  */
 
-window.NS = 'ci-'
-console.log('MAIN', NS, window)
-
 import CIBlock from './block/CIBlock.vue'
 import CIBlockBody from './block/CIBlockBody.vue'
 import CIBlockFooter from './block/CIBlockFooter.vue'

@@ -27,6 +27,7 @@ import CILoading from './loading/CILoading.vue'
 import CIPagination from './pagination/BSPagination.vue'
 
 import CITabBar from './tabView/CITabBar.vue'
+import CITreeNav from './treeNav/CITreeNav.vue'
 
 import CITable from './table/BSTable.vue'
 
@@ -77,6 +78,7 @@ const CIomponents = {
 
   'ci-tab-bar': CITabBar,
   'ci-table': CITable,
+  'ci-tree-nav': CITreeNav,
 
   /* for form */
   'ci-button': CIButton,

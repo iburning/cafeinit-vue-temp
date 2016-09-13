@@ -78,6 +78,10 @@ router.map({
 
   '/tables': {
     component: require('./tables.vue')
+  },
+
+  '/tree-nav': {
+    component: require('./treeNav.vue')
   }
 })
 
