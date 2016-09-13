@@ -66,3 +66,23 @@
 .am-btn-primary {
   .button-variant(@color-white; @color-primary; @color-primary)
 }
+
+
+.am-btn-primary.am-disabled,
+.am-btn-primary.am-disabled.am-active,
+.am-btn-primary.am-disabled:active,
+.am-btn-primary.am-disabled:focus,
+.am-btn-primary.am-disabled:hover,
+.am-btn-primary[disabled],
+.am-btn-primary[disabled].am-active,
+.am-btn-primary[disabled]:active,
+.am-btn-primary[disabled]:focus,
+.am-btn-primary[disabled]:hover,
+fieldset[disabled] .am-btn-primary,
+fieldset[disabled] .am-btn-primary.am-active,
+fieldset[disabled] .am-btn-primary:active,
+fieldset[disabled] .am-btn-primary:focus,
+fieldset[disabled] .am-btn-primary:hover {
+  background-color: lighten(@color-primary, 10%);
+  border-color: lighten(@color-primary, 10%);
+}
