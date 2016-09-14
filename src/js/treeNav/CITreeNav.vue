@@ -4,8 +4,9 @@
       v-bind:class="[item.className, {'ci-active': currentIndex == index}]"
       v-on:click="clickItem(index, item)">
       <a v-link="item.path">{{item.text}}</a>
-
-      <ci-tree-nav v-bind:items="item.subItems"></ci-tree-nav>
+      <ci-tree-nav class="ci-tree-nav-sub"
+        v-if="item.subItems && item.subItems.length"
+        v-bind:items="item.subItems"></ci-tree-nav>
     </li>
   </ul>
 </template>
