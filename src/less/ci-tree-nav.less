@@ -17,23 +17,49 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  line-height: @base-height;
   border-bottom: 1px solid @color-border;
 
   a {
     display: block;
     padding: 5px 10px;
-  }
+    color: @color-gray-dark;
 
-  &.ci-active {
-    a {
+    &:hover {
       color: @color-primary;
+      text-decoration: none;
     }
   }
 
+  &.ci-active {
+    background-color: @color-primary;
+
+    >a {
+      color: @color-white;
+    }
+  }
+
+  // 二级菜单
   >.ci-tree-nav {
     padding: 0;
     margin: 0;
     border-top: 1px solid @color-border;
+
+    .ci-tree-nav-item {
+      background-color: lighten(@color-gray-lighter, 2.5%);
+
+      >a {
+        padding: 5px 20px;
+      }
+
+      &.ci-active {
+        >a {
+          color: @color-primary;
+        }
+      }
+    }
+
+    .ci-tree-nav-item:last-child {
+      border-bottom: none;
+    }
   }
 }
