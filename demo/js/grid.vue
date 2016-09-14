@@ -35,7 +35,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .my-grid [class^=col-],
 .my-grid [class^=am-u-],
 .my-grid [class^=ci-col-] {
