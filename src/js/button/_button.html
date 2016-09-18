@@ -9,6 +9,10 @@
     (status === 'actived') ? (ns + 'actived') : ''
   ]"
   v-bind:disabled="status === 'disabled' || status === 'loading'">
-  <span class="am-icon-circle-o-notch am-icon-spin" v-if="status === 'loading'"></span>
+  <i v-if="status === 'loading'"
+    v-bind:class="{
+      'fa fa-circle-o-notch ci-icon-spin': ns === '',
+      'am-icon-circle-o-notch am-icon-spin': ns === 'am-'
+    }"></i>
   <slot>This is a button</slot>
 </button>

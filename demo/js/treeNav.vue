@@ -35,7 +35,7 @@
       }]
     }]"></ci-tree-nav> -->
 
-    <ci-tree-nav v-bind:items="[{
+    <ci-tree-nav v-bind:active-index="2" v-bind:items="[{
       text: 'Category A',
       link: { path: '/category/a'},
       icon: 'dashboard'
@@ -57,6 +57,7 @@
       text: 'Category C',
       link: { path: '/category/c'},
       icon: 'heart',
+      subItemsActiveIndex: 1,
       subItems: [{
         text: 'Cat C-1',
         link: { path: '/category/c/1'}
