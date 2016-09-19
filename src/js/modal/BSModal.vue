@@ -5,7 +5,7 @@
       v-on:click="closeViaDimmer">
       <div class="modal-dialog"
         v-bind:class="{'modal-lg': size === 'lg', 'modal-sm': size === 'sm'}"
-        v-bind:style="{'margin-top': marginTop + 'px'}">
+        v-bind:style="{'margin-top-x': marginTop + 'px'}">
         <div class="modal-content">
           <slot name="header"></slot>
           <slot name="body"></slot>
