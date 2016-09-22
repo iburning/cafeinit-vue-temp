@@ -43,7 +43,7 @@
   <ci-block>
     <ci-block-header>Status</ci-block-header>
     <ci-block-body>
-      <ci-button style="primary" status="actived">Actived Button</ci-button>
+      <ci-button style="primary" status="active">Actived Button</ci-button>
       <ci-button style="primary" status="disabled">Disabled Button</ci-button>
       <ci-button style="primary" status="loading">Loading Button</ci-button>
     </ci-block-body>

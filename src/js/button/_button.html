@@ -6,7 +6,7 @@
     block ? (ns + 'btn-block') : '',
     radius ? (ns + 'btn-radius') : '',
     round ? (ns + 'btn-round') : '',
-    (status === 'actived') ? (ns + 'actived') : ''
+    (status === 'active') ? (ns + 'active') : ''
   ]"
   v-bind:disabled="status === 'disabled' || status === 'loading'">
   <i v-if="status === 'loading'"

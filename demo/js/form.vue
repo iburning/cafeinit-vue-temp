@@ -71,6 +71,12 @@ export default {
     // ...
   },
 
+  watch: {
+    category: function (val, oldVal) {
+      console.log('category', val, oldVal)
+    }
+  },
+
   methods: {
     save() {
       console.log('save', this)
