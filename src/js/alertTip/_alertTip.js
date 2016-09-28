@@ -34,25 +34,6 @@ export default {
     }
   },
 
-  watch: {
-    isShow: function (val, oldVal) {
-      console.log('isShow', val, oldVal)
-      // var that = this;
-      //
-      // if (val && this.duration > 0) {
-      //   if (this.timer) {
-      //     clearTimeout(this.timer)
-      //   }
-      //   else {
-      //     this.timer = setTimeout(function () {
-      //       that.close()
-      //       clearTimeout(that.timer)
-      //     }, this.duration)
-      //   }
-      // }
-    }
-  },
-
   methods: {
     show() {
       this.isShow = true
@@ -72,7 +53,7 @@ export default {
 
     autoClose() {
       var that = this
-      console.log('autoClose', this.timer)
+      // console.log('autoClose', this.timer)
 
       this.timer = setTimeout(function () {
         that.close()
