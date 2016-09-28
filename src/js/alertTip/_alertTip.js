@@ -35,31 +35,49 @@ export default {
   },
 
   watch: {
-    isShow: function (val) {
-      var that = this;
-
-      console.log('isShow', val, this.duration)
-      if (val && this.duration > 0) {
-        if (this.timer) {
-          clearTimeout(this.timer)
-        }
-        else {
-          this.timer = setTimeout(function () {
-            that.close()
-            clearTimeout(that.timer)
-          }, this.duration)
-        }
-      }
+    isShow: function (val, oldVal) {
+      console.log('isShow', val, oldVal)
+      // var that = this;
+      //
+      // if (val && this.duration > 0) {
+      //   if (this.timer) {
+      //     clearTimeout(this.timer)
+      //   }
+      //   else {
+      //     this.timer = setTimeout(function () {
+      //       that.close()
+      //       clearTimeout(that.timer)
+      //     }, this.duration)
+      //   }
+      // }
     }
   },
 
   methods: {
     show() {
       this.isShow = true
+
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+
+      if (this.duration > 0) {
+        this.autoClose()
+      }
     },
 
     close() {
       this.isShow = false
+    },
+
+    autoClose() {
+      var that = this
+      console.log('autoClose', this.timer)
+
+      this.timer = setTimeout(function () {
+        that.close()
+        clearTimeout(that.timer)
+      }, this.duration)
     }
   }
 }
