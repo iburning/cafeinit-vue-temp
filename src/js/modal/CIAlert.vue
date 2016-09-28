@@ -1,7 +1,7 @@
 <template>
   <ci-modal v-bind:is-show.sync="isShow" v-bind:is-close-via-dimmer="isCloseViaDimmer">
     <div class="am-modal-hd" slot="header" v-if="title">{{title}}</div>
-    <div class="am-modal-bd" slot="body"><slot>default alert</slot></div>
+    <div class="am-modal-bd" slot="body"><slot>{{{content}}}</slot></div>
     <div class="am-modal-footer" slot="footer">
       <span class="am-modal-btn" v-on:click="ok">{{okText}}</span>
     </div>
@@ -23,12 +23,12 @@ export default {
       default: false
     },
 
-    // lg: {
-    //   type: Boolean,
-    //   default: false
-    // },
-
     title: {
+      type: String,
+      default: ''
+    },
+
+    content: {
       type: String,
       default: ''
     },

@@ -11,11 +11,10 @@
 
   <ci-alert
     size="lg"
+    content="<strong>Alert2 Content</strong>"
     v-bind:is-show.sync="isShowAlert2"
     v-bind:is-close-via-dimmer="false"
-    v-on:close="alertOnClose">
-    Alert2 Content
-  </ci-alert>
+    v-on:close="alertOnClose"></ci-alert>
 
   <ci-confirm v-bind:is-show.sync="isShowConfirm" v-on:ok="confirmOnOK" v-on:cancel="confirmOnCancel">
     Do you want quit?

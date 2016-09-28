@@ -7,7 +7,7 @@
     <div class="modal-header" slot="header" v-if="title">
       <h4 class="modal-title">{{title}}</h4>
     </div>
-    <div class="modal-body" slot="body"><slot>default alert content</slot></div>
+    <div class="modal-body" slot="body"><slot>{{{content}}}</slot></div>
     <div class="modal-footer" slot="footer">
       <ci-link-button v-on:click="close">{{okText}}</ci-link-button>
     </div>
@@ -40,6 +40,11 @@ export default {
     },
 
     title: {
+      type: String,
+      default: ''
+    },
+
+    content: {
       type: String,
       default: ''
     },
