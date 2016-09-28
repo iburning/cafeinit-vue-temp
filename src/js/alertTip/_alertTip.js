@@ -38,12 +38,13 @@ export default {
     isShow: function (val) {
       var that = this;
 
+      console.log('isShow', val, this.duration)
       if (val && this.duration > 0) {
         if (this.timer) {
           clearTimeout(this.timer)
         }
         else {
-          this.timer = setTimeout(function functionName() {
+          this.timer = setTimeout(function () {
             that.close()
             clearTimeout(that.timer)
           }, this.duration)
