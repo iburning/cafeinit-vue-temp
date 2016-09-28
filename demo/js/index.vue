@@ -36,6 +36,11 @@
       <strong class="title">Modals</strong>
       <span class="sub-title">模态窗</span>
     </ci-list-cell>
+
+    <ci-list-cell accessory="link" v-link="{path: '/alert-tip'}">
+      <strong class="title">Alert Tip</strong>
+      <span class="sub-title">警告提示</span>
+    </ci-list-cell>
   </ci-list>
 
   <ci-list>

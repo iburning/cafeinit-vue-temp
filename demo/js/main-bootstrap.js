@@ -24,6 +24,10 @@ router.map({
     component: require('./index.vue')
   },
 
+  '/alert-tip': {
+    component: require('./alertTip.vue')
+  },
+
   '/block': {
     component: require('./block.vue')
   },

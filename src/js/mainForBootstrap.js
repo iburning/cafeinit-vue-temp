@@ -1,8 +1,10 @@
 /**
  * @fileOverview main for bootstrap
  * @author: burning <www.cafeinit.com>
- * @date: 2016-09-08
+ * @date: 2016-09-28
  */
+
+import CIAlertTip from './alertTip/BSAlertTip.vue'
 
 import CIBlock from './block/CIBlock.vue'
 import CIBlockBody from './block/CIBlockBody.vue'
@@ -54,6 +56,8 @@ import CIScrollHelper from './utils/CIScrollHelper'
 
 
 const CIomponents = {
+  'ci-alert-tip': CIAlertTip,
+
   'ci-block': CIBlock,
   'ci-block-body': CIBlockBody,
   'ci-block-footer': CIBlockFooter,
