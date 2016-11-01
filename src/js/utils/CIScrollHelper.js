@@ -41,8 +41,8 @@ prototype._bindEvent = function () {
         console.log('willScrollToStart');
         that.isListenScrollToStart = false;
 
-        if (typeof that.willScrollToEndHandler === 'function') {
-          that.willScrollToEndHandler();
+        if (typeof that.willScrollToStartHandler === 'function') {
+          that.willScrollToStartHandler();
         }
       }
     }
