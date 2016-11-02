@@ -1,4 +1,5 @@
 <template>
+  <ci-loading v-show="isLoading"></ci-loading>
   <ci-list>
     <ci-list-cell accessory="link" v-for="item in items">
       {{item.title}}
@@ -25,18 +26,29 @@ export default {
   ready() {
     var that = this;
 
-    this.getData(this.page, (items) => {
-      that.items = items;
-    })
-
     var scroll = new CIScrollHelper({
       container: $(window),
       content: $('body'),
+      willScrollToStartHandler: () => {
+        that.getData(++that.page, function (items) {
+          for (var i = 0; i < items.length; i++) {
+            that.items.unshift(items[i])
+            scroll.scrollTo(0, 100)
+          }
+        })
+      },
       willScrollToEndHandler: () => {
         that.getData(++that.page, function (items) {
           that.items = that.items.concat(items)
         })
       }
+    })
+
+    this.getData(this.page, (items) => {
+      that.items = items;
+      setTimeout(function () {
+        scroll.scrollTo(0, 100)
+      }, 100)
     })
   },
 
