@@ -5,7 +5,7 @@ import config from './_modal'
 
 config.props.ns = {
   type: String,
-  default: 'ci-'
+  default: 'am-'
 }
 
 export default config

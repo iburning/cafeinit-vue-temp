@@ -1,16 +1,16 @@
-<template>
-  <ci-modal v-bind:is-show.sync="isShow" v-bind:is-close-via-dimmer="isCloseViaDimmer">
-    <div class="am-modal-hd" slot="header" v-if="title">{{title}}</div>
-    <div class="am-modal-bd" slot="body"><slot>{{{content}}}</slot></div>
-    <div class="am-modal-footer" slot="footer">
-      <span class="am-modal-btn" v-on:click="ok">{{okText}}</span>
-    </div>
-  </ci-modal>
-</template>
+/**
+ * @fileoverview alert
+ * @author: burning <www.cafeinit.com>
+ * @version: 2016-11-05
+ */
 
-<script>
 export default {
   props: {
+    ns: {
+      type: String,
+      default: ''
+    },
+
     isShow: {
       type: Boolean,
       default: false
@@ -19,6 +19,11 @@ export default {
     isCloseViaDimmer: {     // 是否通过点击遮罩层关闭模态框，默认为true
       type: Boolean,
       default: false
+    },
+
+    size: {
+      type: String,
+      default: ''       // lg
     },
 
     title: {
@@ -52,4 +57,3 @@ export default {
     }
   }
 }
-</script>

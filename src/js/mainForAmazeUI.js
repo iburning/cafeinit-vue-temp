@@ -43,9 +43,9 @@ import CILinkButton from './button/AMLinkButton.vue'
 
 
 /* for modal */
-import CIModal from './modal/CIModal.vue'
+import CIModal from './modal/AMModal.vue'
 import CIActions from './modal/CIActions.vue'
-import CIAlert from './modal/CIAlert.vue'
+import CIAlert from './modal/AMAlert.vue'
 import CIConfirm from './modal/CIConfirm.vue'
 
 
